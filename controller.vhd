@@ -16,7 +16,7 @@ BEGIN
 	process
 	begin
 		CASE opcode IS
-			WHEN "000000" => 
+			WHEN "000000" => -- R
 				RegDst <= '1';
 				ulaFonte <= '0';
 				memParaReg <= '0';
