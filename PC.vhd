@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
  
 entity PC is
 	generic(
-		DATA_WIDTH : natural := 32
+		DATA_WIDTH : natural := 5
 	);
 	port(
 		clk, rst, en : in std_logic;  
@@ -19,7 +19,7 @@ begin
 	begin  
 		if (rst='1') then  
 			Temp <= (others	=> '0');  
-		elsif (clk'event and clk='1')then  
+		elsif (clk'event and clk='0')then  -- ver a borda!
 			if (en='1') then  
 				Temp <= D;
 			end if;  

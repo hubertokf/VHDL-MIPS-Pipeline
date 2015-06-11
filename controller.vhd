@@ -5,45 +5,56 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY controller IS
 	PORT (
-		input : IN std_logic_vector(4 downto 0);
-		clk : IN STD_LOGIC;
-		rst : IN STD_LOGIC := '0';
-		wb : out STD_LOGIC;
-		m : out STD_LOGIC;
-		ex : out
+		opcode : IN std_logic_vector(4 downto 0);
+		ulaOp : out std_logic_vector(1 downto 0);
+		RegDst, ulaFonte, escMem, lerMem, DvC, memParaReg, fontePC : out std_logic
 	);
 END controller;
 
-ARCHITECTURE rtl OF controller IS
-    TYPE type_fstate IS (s0,s1,s2,s3,s4);
-	 
-    SIGNAL fstate : type_fstate;
-    SIGNAL reg_fstate : type_fstate;
-	 
+ARCHITECTURE rtl OF controller IS	 
 BEGIN
-    PROCESS (clk,reg_fstate)
-    BEGIN
-        IF (clk='1' AND clk'event) THEN
-            fstate <= reg_fstate;
-        END IF;
-    END PROCESS;
 
-    PROCESS (fstate,rst)
-    BEGIN
-        IF (rst='1') THEN
-            reg_fstate <= s0;
-        ELSE
-            CASE fstate IS
-                WHEN s0 =>
-                WHEN s1 =>
-					 WHEN s2 =>
-                WHEN s3 =>
-					 WHEN s4 =>
-						  
-                WHEN OTHERS => 
-                    enable <= "00";
-                    report "Reach undefined state";
-            END CASE;
-        END IF;
-    END PROCESS;
+	CASE opcode IS
+		WHEN "000000" => 
+			RegDst <= '1';
+			ulaFonte <= '0';
+			memParaReg <= '0';
+			lerMem <= '0';
+			escMem <= '0';
+			DvC <= '0';
+			ulaOp <= "10";
+		WHEN "100011" => 
+			RegDst <= '0';
+			ulaFonte <= '1';
+			memParaReg <= '1';
+			lerMem <= '1';
+			escMem <= '0';
+			DvC <= '0';
+			ulaOp <= "00";
+		WHEN "101011" => 
+			RegDst <= '-';
+			ulaFonte <= '1';
+			memParaReg <= '-';
+			lerMem <= '0';
+			escMem <= '1';
+			DvC <= '0';
+			ulaOp <= "00";
+		WHEN "000100" => 
+			RegDst <= '-';
+			ulaFonte <= '0';
+			memParaReg <= '-';
+			lerMem <= '0';
+			escMem <= '0';
+			DvC <= '1';
+			ulaOp <= "01";
+		WHEN OTHERS => 
+			RegDst <= '0';
+			ulaFonte <= '0';
+			memParaReg <= '0';
+			lerMem <= '0';
+			escMem <= '0';
+			DvC <= '0';
+			ulaOp <= "00";
+	END CASE;
+   
 END rtl;
