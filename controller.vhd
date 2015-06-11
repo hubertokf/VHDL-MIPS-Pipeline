@@ -13,48 +13,50 @@ END controller;
 
 ARCHITECTURE rtl OF controller IS	 
 BEGIN
-
-	CASE opcode IS
-		WHEN "000000" => 
-			RegDst <= '1';
-			ulaFonte <= '0';
-			memParaReg <= '0';
-			lerMem <= '0';
-			escMem <= '0';
-			DvC <= '0';
-			ulaOp <= "10";
-		WHEN "100011" => 
-			RegDst <= '0';
-			ulaFonte <= '1';
-			memParaReg <= '1';
-			lerMem <= '1';
-			escMem <= '0';
-			DvC <= '0';
-			ulaOp <= "00";
-		WHEN "101011" => 
-			RegDst <= '-';
-			ulaFonte <= '1';
-			memParaReg <= '-';
-			lerMem <= '0';
-			escMem <= '1';
-			DvC <= '0';
-			ulaOp <= "00";
-		WHEN "000100" => 
-			RegDst <= '-';
-			ulaFonte <= '0';
-			memParaReg <= '-';
-			lerMem <= '0';
-			escMem <= '0';
-			DvC <= '1';
-			ulaOp <= "01";
-		WHEN OTHERS => 
-			RegDst <= '0';
-			ulaFonte <= '0';
-			memParaReg <= '0';
-			lerMem <= '0';
-			escMem <= '0';
-			DvC <= '0';
-			ulaOp <= "00";
-	END CASE;
-   
+	process
+	begin
+		CASE opcode IS
+			WHEN "000000" => 
+				RegDst <= '1';
+				ulaFonte <= '0';
+				memParaReg <= '0';
+				lerMem <= '0';
+				escMem <= '0';
+				DvC <= '0';
+				ulaOp <= "10";
+			WHEN "100011" => 
+				RegDst <= '0';
+				ulaFonte <= '1';
+				memParaReg <= '1';
+				lerMem <= '1';
+				escMem <= '0';
+				DvC <= '0';
+				ulaOp <= "00";
+			WHEN "101011" => 
+				RegDst <= '-';
+				ulaFonte <= '1';
+				memParaReg <= '-';
+				lerMem <= '0';
+				escMem <= '1';
+				DvC <= '0';
+				ulaOp <= "00";
+			WHEN "000100" => 
+				RegDst <= '-';
+				ulaFonte <= '0';
+				memParaReg <= '-';
+				lerMem <= '0';
+				escMem <= '0';
+				DvC <= '1';
+				ulaOp <= "01";
+			WHEN OTHERS => 
+				RegDst <= '0';
+				ulaFonte <= '0';
+				memParaReg <= '0';
+				lerMem <= '0';
+				escMem <= '0';
+				DvC <= '0';
+				ulaOp <= "00";
+		END CASE;
+	end process;
+		
 END rtl;

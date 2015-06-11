@@ -13,29 +13,30 @@ END opULA;
 
 ARCHITECTURE rtl OF opULA IS	 
 BEGIN
-
-	CASE ULAop IS
-		WHEN "00" => 
-			oper <= "010";
-		WHEN "01" => 
-			oper <= "110";
-		WHEN "10" => 
-			CASE ULAop IS
-				WHEN "100000" =>
-					oper <= "010";
-				WHEN "100010" =>
-					oper <= "110";
-				WHEN "100100" =>
-					oper <= "000";
-				WHEN "100101" =>
-					oper <= "001";
-				WHEN "101010" =>
-					oper <= "111";
-				WHEN OTHERS => 
-					oper <= "010";
-			END CASE;
-		WHEN OTHERS => 
-			oper <= "010";
-	END CASE;
-   
+	process
+	begin
+		CASE ULAop IS
+			WHEN "00" => 
+				oper <= "010";
+			WHEN "01" => 
+				oper <= "110";
+			WHEN "10" => 
+				CASE ULAop IS
+					WHEN "100000" => --add
+						oper <= "010";
+					WHEN "100010" => --sub
+						oper <= "110";
+					WHEN "100100" => --and
+						oper <= "000";
+					WHEN "100101" => --or
+						oper <= "001";
+					WHEN "101010" => --slt
+						oper <= "111";
+					WHEN OTHERS => 
+						oper <= "010";
+				END CASE;
+			WHEN OTHERS => 
+				oper <= "010";
+		END CASE;
+   end process;
 END rtl;
