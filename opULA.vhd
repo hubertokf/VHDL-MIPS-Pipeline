@@ -46,10 +46,10 @@ BEGIN
 						oper <= "0101";
 					WHEN "100101" => --or VERIFICAR OPERAÇÃO *
 						oper <= "0001";
-					WHEN "000000" => --sll VERIFICAR OPERAÇÃO
-						oper <= "0000";
+					WHEN "000000" => --sll VERIFICAR OPERAÇÃO **
+						oper <= "1001";
 					WHEN "101010" => --slt VERIFICAR OPERAÇÃO
-						oper <= "0111";
+						oper <= "1010";
 					WHEN "101011" => --sltu VERIFICAR OPERAÇÃO
 						oper <= "0000";
 					WHEN "000011" => --sra VERIFICAR OPERAÇÃO

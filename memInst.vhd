@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.all;
 
-ENTITY memoria_mips_instru IS
+ENTITY memInst IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -13,10 +13,10 @@ ENTITY memoria_mips_instru IS
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-END memoria_mips_instru;
+END memInst;
 
 
-ARCHITECTURE SYN OF memoria_mips_instru IS
+ARCHITECTURE SYN OF memInst IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (31 DOWNTO 0);
 
@@ -56,7 +56,7 @@ BEGIN
 	GENERIC MAP (
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
-		init_file => "memoria_mips_instru.mif",
+		init_file => "memInst.mif",
 		intended_device_family => "Cyclone IV GX",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",

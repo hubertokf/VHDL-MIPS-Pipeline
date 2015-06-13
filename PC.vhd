@@ -6,7 +6,7 @@ entity PC is
 		DATA_WIDTH : natural := 5
 	);
 	port(
-		clk, rst, en : in std_logic;  
+		clk, rst: in std_logic;  
 		D : in  std_logic_vector ((DATA_WIDTH-1) downto 0);  
 		Q : out std_logic_vector ((DATA_WIDTH-1) downto 0)
 	);  
@@ -19,10 +19,8 @@ begin
 	begin  
 		if (rst='1') then  
 			Temp <= (others	=> '0');  
-		elsif (clk'event and clk='0')then  -- ver a borda!
-			if (en='1') then  
-				Temp <= D;
-			end if;  
+		elsif (clk'event and clk='0')then  -- ver a borda! 
+			Temp <= D;
 		end if;  
 	end process;
 	

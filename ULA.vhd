@@ -2,6 +2,7 @@ Library IEEE;
 Use ieee.std_logic_1164.all;
 Use ieee.std_logic_unsigned.all;
 Use ieee.std_logic_arith.all;
+Use ieee.numeric_std.all;
 
 Entity ULA is
 port (
@@ -13,25 +14,41 @@ port (
 end ULA;
 
 architecture rtl of ULA is
+	signal sig_output: std_logic_vector(31 downto 0);
 begin
-	with oper select
-		output <=
-			(in0 and in1) 	when "0000",
-			(in0 or in1) 	when "0001",
-			(in0 + in1)		when "0010",
-			(in0 * in1) 	when "0011",
-			(in0 / in1) 	when "0100",
-			(in0 nor in1)	when "0101",
-			(in0-in1) 		when "0110",
-			(in0 <= '1') 	when "0111",
-			(in0 xor in1)	when "1000",
-								when "1001",
-								when "1010",
-								when "1011",
-								when "1100",
-								when "1101",
-								when "1110",
-								when "1111",
-			in0 				when others;
-			
+	process
+	begin
+		case oper is
+			when "0000" =>
+				sig_output <= in0 and in1;
+			when "0001" =>
+				sig_output <= in0 or in1;
+			when "0010" =>
+				sig_output <= in0 + in1;
+			when "0011" =>
+				sig_output <= in0 * in1;
+			--when "0100" =>
+				--sig_output <= in0 / in1;
+			when "0101" =>
+				sig_output <= in0 nor in1;
+			when "0110" =>
+				sig_output <= in0 - in1;
+			when "0111" => -- verificar
+				sig_output <= (0 => '1', others => '0');
+			when "1000" =>
+				sig_output <= in0 xor in1;
+			--when "1001" =>
+				--sig_output <= in0 sll in1;
+			WHEN OTHERS =>
+				sig_output <= in0;
+		end case;
+		
+		if (sig_output = "00000000000000000000000000000000") then
+			zero <= '1';
+		else
+			zero <= '0';
+		end if;
+	end process;
+	
+	output <= sig_output;
 end rtl;	 
