@@ -25,21 +25,11 @@ architecture rtl of MIPS is
 	
 	component memInst
 		PORT(
-			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
+			address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
 			clock		: IN STD_LOGIC  := '1';
 			data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
 			wren		: IN STD_LOGIC ;
-			q		   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
-		);
-	end component;
-	
-	component memData
-		PORT(
-			address	: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-			clock		: IN STD_LOGIC  := '1';
-			data		: IN STD_LOGIC_VECTOR (31 DOWNTO 0);
-			wren		: IN STD_LOGIC ;
-			q		   : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
+			q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 		);
 	end component;
 	

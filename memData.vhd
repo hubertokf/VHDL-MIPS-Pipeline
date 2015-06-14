@@ -4,7 +4,7 @@
 -- MODULE: altsyncram 
 
 -- ============================================================
--- File Name: memInst.vhd
+-- File Name: memData.vhd
 -- Megafunction Name(s):
 -- 			altsyncram
 --
@@ -39,7 +39,7 @@ USE ieee.std_logic_1164.all;
 LIBRARY altera_mf;
 USE altera_mf.all;
 
-ENTITY memInst IS
+ENTITY memData IS
 	PORT
 	(
 		address		: IN STD_LOGIC_VECTOR (9 DOWNTO 0);
@@ -48,10 +48,10 @@ ENTITY memInst IS
 		wren		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
-END memInst;
+END memData;
 
 
-ARCHITECTURE SYN OF meminst IS
+ARCHITECTURE SYN OF memdata IS
 
 	SIGNAL sub_wire0	: STD_LOGIC_VECTOR (31 DOWNTO 0);
 
@@ -90,7 +90,7 @@ BEGIN
 	GENERIC MAP (
 		clock_enable_input_a => "BYPASS",
 		clock_enable_output_a => "BYPASS",
-		init_file => "memInst.mif",
+		init_file => "memData.mif",
 		intended_device_family => "Cyclone II",
 		lpm_hint => "ENABLE_RUNTIME_MOD=NO",
 		lpm_type => "altsyncram",
@@ -137,7 +137,7 @@ END SYN;
 -- Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 -- Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 -- Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
--- Retrieval info: PRIVATE: MIFfilename STRING "memInst.mif"
+-- Retrieval info: PRIVATE: MIFfilename STRING "memData.mif"
 -- Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "1024"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "3"
@@ -154,7 +154,7 @@ END SYN;
 -- Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_INPUT_A STRING "BYPASS"
 -- Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
--- Retrieval info: CONSTANT: INIT_FILE STRING "memInst.mif"
+-- Retrieval info: CONSTANT: INIT_FILE STRING "memData.mif"
 -- Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 -- Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
@@ -176,9 +176,9 @@ END SYN;
 -- Retrieval info: CONNECT: @data_a 0 0 32 0 data 0 0 32 0
 -- Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 32 0 @q_a 0 0 32 0
--- Retrieval info: GEN_FILE: TYPE_NORMAL memInst.vhd TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL memInst.inc FALSE
--- Retrieval info: GEN_FILE: TYPE_NORMAL memInst.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL memInst.bsf TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL memInst_inst.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL memData.vhd TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL memData.inc FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL memData.cmp TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL memData.bsf TRUE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL memData_inst.vhd TRUE
 -- Retrieval info: LIB_FILE: altera_mf

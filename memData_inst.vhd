@@ -1,4 +1,4 @@
-memInst_inst : memInst PORT MAP (
+memData_inst : memData PORT MAP (
 		address	 => address_sig,
 		clock	 => clock_sig,
 		data	 => data_sig,
