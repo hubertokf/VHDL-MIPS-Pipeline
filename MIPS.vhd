@@ -128,7 +128,7 @@ begin
 	);
 	
 	mux_IN_PC: mux2to1 PORT MAP (
-		sel => sig_FontePC,
+		sel => sig_fontePC,
 		A => sig_OUT_PCP4_1,
 		B => sig_OUT_jump,
 		X => sig_in_PC
@@ -136,7 +136,7 @@ begin
 	
 	PCP4: addSub GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
 		a => sig_out_PC,
-		b => "0000000100",
+		b => "0000000100", -- 4
 		add_sub => '1',
 		result => sig_OUT_PCP4_1
 	);
@@ -161,5 +161,106 @@ begin
 	
 	sig_OUT_PCP4_2 <= out_PIPE1(9 downto 0);
 	sig_inst <= out_PIPE1(41 downto 10);
+	sig_opcode <= sig_inst(31 downto 26);
+	sig_ReadReg1 <= sig_inst(25 downto 21);
+	sig_ReadReg2 <= sig_inst(20 downto 16);
+	sig_imediate <= sig_inst(15 downto 0);
+	sig_regDest <= sig_inst(15 downto 11);
+
+	controle: controller PORT MAP (
+		opcode => sig_opcode,
+		ulaOp => sig_ulaOp,
+		RegDST => sig_RegDST,
+		ulaFonte => sig_ulaFonte,
+		escMem => sig_escMem,
+		lerMem => sig_lerMem,
+		DvC => sig_DvC,
+		memParaReg => sig_memParaReg,
+		fontePC => sig_fontePC
+	);
     
+	registradores: regbank PORT MAP (
+		A1 => sig_ReadReg1,
+		A2 => sig_ReadReg2,
+		A3 => sig_RegEsc,
+		clk => clk,
+		rst => rst,
+		we3 => sig_escReg,
+		wd3 => sig_regData,
+		out1 => sig_dadoLido1,
+		out2 => sig_dadoLido2
+	);
+
+	ExtSinal: signalExtensor PORT MAP (
+		in16 => sig_imediate,
+		out32 => sig_imediate_ext,
+	);
+
+	in_PIPE1 <= sig_ulaOp & sig_RegDST & sig_ulaFonte & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_fontePC & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
+
+	PIPE2: flipflop GENERIC MAP (DATA_WIDTH => 125) PORT MAP (
+		clk => clk,
+		rst => rst,
+		D => in_PIPE2,
+		Q => out_PIPE2
+	);
+
+	-- TERCEIRO ESTÁGIO --
+
+	sig_ulaOp_1 <= out_PIPE2(125 downto 124);
+	sig_RegDST_1 <= out_PIPE2(123);
+	sig_ulaFonte_1 <= out_PIPE2(122);
+	sig_escMem_1 <= out_PIPE2(121);
+	sig_lerMem_1 <= out_PIPE2(120);
+	sig_DvC_1 <= out_PIPE2(119);
+	sig_memParaReg_1 <= out_PIPE2(118);
+	sig_fontePC_1 <= out_PIPE2(117);
+	sig_OUT_PCP4_3 <= out_PIPE2(116 downto 107);
+	sig_dadoLido1_1 <= out_PIPE2(106 downto 75);
+	sig_dadoLido2_1 <= out_PIPE2(74 downto 43);
+	sig_imediate_ext_1 <= out_PIPE2(42 downto 11);
+	sig_function <= sig_imediate_ext_1(6 downto 0);
+	sig_ReadReg2_1 <= out_PIPE2(10 downto 5);
+	sig_regDest_1 <= out_PIPE2(4 downto 0);
+
+	sig_somInPC <= sig_imediate_ext_1(31 downto 2) & "00";
+	sig_OUT_PCP4_3_32 <= "000000000000" & sig_OUT_PCP4_3;
+
+	inPC: addSub GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
+		a => sig_OUT_PCP4_3_32,
+		b => sig_somInPC, 
+		add_sub => '1',
+		result => sig_OUT_jump
+	);
+
+	mux_IN_PC: mux2to1 PORT MAP (
+		sel => sig_ulaFonte_1,
+		A => sig_dadoLido2_1,
+		B => sig_imediate_ext_1,
+		X => sig_IN2_ULA
+	);
+
+	operaULA: opULA PORT MAP (
+		ULAop => sig_ulaOp_1,
+		funct => sig_function,
+		oper => sig_operULA
+	);
+
+	ULA1: ULA PORT MAP (
+		in0 => sig_dadoLido1_1,
+		in1 => sig_IN2_ULA,
+		oper => sig_operULA,
+		zero => sig_ULA_zero,
+		over => sig_ULA_over,
+		output => sig_ULA_result
+	);
+
+	muxEscReg: mux2to1 PORT MAP (
+		sel => sig_RegDST_1,
+		A => sig_dadoLido2_1,
+		B => sig_imediate_ext_1,
+		X => sig_RegEsc_0
+	);
+
+
 end rtl;
