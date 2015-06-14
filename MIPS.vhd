@@ -85,7 +85,7 @@ architecture rtl of MIPS is
 		PORT (
 			opcode : IN std_logic_vector(4 downto 0);
 			ulaOp : out std_logic_vector(1 downto 0);
-			RegDst, ulaFonte, escMem, lerMem, DvC, memParaReg, fontePC : out std_logic
+			RegDst, ulaFonte, escMem, lerMem, DvC, memParaReg, escReg : out std_logic
 		);
 	END component;
 	
@@ -185,7 +185,7 @@ begin
 		A3 => sig_RegEsc,
 		clk => clk,
 		rst => rst,
-		we3 => sig_escReg,
+		we3 => sig_escReg_3,
 		wd3 => sig_regData,
 		out1 => sig_dadoLido1,
 		out2 => sig_dadoLido2
@@ -196,7 +196,7 @@ begin
 		out32 => sig_imediate_ext,
 	);
 
-	in_PIPE1 <= sig_ulaOp & sig_RegDST & sig_ulaFonte & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_fontePC & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
+	in_PIPE2 <= sig_ulaOp & sig_RegDST & sig_ulaFonte & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_escReg & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
 
 	PIPE2: flipflop GENERIC MAP (DATA_WIDTH => 125) PORT MAP (
 		clk => clk,
@@ -207,20 +207,20 @@ begin
 
 	-- TERCEIRO ESTÁGIO --
 
-	sig_ulaOp_1 <= out_PIPE2(125 downto 124);
-	sig_RegDST_1 <= out_PIPE2(123);
-	sig_ulaFonte_1 <= out_PIPE2(122);
-	sig_escMem_1 <= out_PIPE2(121);
-	sig_lerMem_1 <= out_PIPE2(120);
-	sig_DvC_1 <= out_PIPE2(119);
-	sig_memParaReg_1 <= out_PIPE2(118);
-	sig_fontePC_1 <= out_PIPE2(117);
-	sig_OUT_PCP4_3 <= out_PIPE2(116 downto 107);
-	sig_dadoLido1_1 <= out_PIPE2(106 downto 75);
-	sig_dadoLido2_1 <= out_PIPE2(74 downto 43);
-	sig_imediate_ext_1 <= out_PIPE2(42 downto 11);
-	sig_function <= sig_imediate_ext_1(6 downto 0);
-	sig_ReadReg2_1 <= out_PIPE2(10 downto 5);
+	sig_ulaOp_1 <= out_PIPE2(124 downto 123);
+	sig_RegDST_1 <= out_PIPE2(122);
+	sig_ulaFonte_1 <= out_PIPE2(121);
+	sig_escMem_1 <= out_PIPE2(120);
+	sig_lerMem_1 <= out_PIPE2(119);
+	sig_DvC_1 <= out_PIPE2(118);
+	sig_memParaReg_1 <= out_PIPE2(117);
+	sig_escReg_1 <= out_PIPE2(116);
+	sig_OUT_PCP4_3 <= out_PIPE2(115 downto 106);
+	sig_dadoLido1_1 <= out_PIPE2(105 downto 74);
+	sig_dadoLido2_1 <= out_PIPE2(73 downto 42);
+	sig_imediate_ext_1 <= out_PIPE2(41 downto 10);
+	sig_function <= sig_imediate_ext_1(5 downto 0);
+	sig_ReadReg2_1 <= out_PIPE2(9 downto 5);
 	sig_regDest_1 <= out_PIPE2(4 downto 0);
 
 	sig_somInPC <= sig_imediate_ext_1(31 downto 2) & "00";
@@ -233,7 +233,7 @@ begin
 		result => sig_OUT_jump
 	);
 
-	mux_IN_PC: mux2to1 PORT MAP (
+	mux_IN_ULA_2: mux2to1 PORT MAP (
 		sel => sig_ulaFonte_1,
 		A => sig_dadoLido2_1,
 		B => sig_imediate_ext_1,
@@ -262,5 +262,60 @@ begin
 		X => sig_RegEsc_0
 	);
 
+	in_PIPE3 <= sig_escMem_1 & sig_lerMem_1 & sig_DvC_1 & sig_memParaReg_1 & sig_escReg_1 & sig_OUT_jump & sig_ULA_zero & sig_ULA_result & sig_dadoLido2_1 & sig_RegEsc_0;
+
+	PIPE3: flipflop GENERIC MAP (DATA_WIDTH => 107) PORT MAP (
+		clk => clk,
+		rst => rst,
+		D => in_PIPE3,
+		Q => out_PIPE3
+	);
+
+	-- QUARTO ESTÁGIO --
+
+	sig_escMem_2 <= out_PIPE3(106);
+	sig_lerMem_2 <= out_PIPE3(105);
+	sig_DvC_2 <= out_PIPE3(104);
+	sig_memParaReg_2 <= out_PIPE3(103);
+	sig_escReg_2 <= out_PIPE3(102);
+	sig_OUT_jump_1 <= out_PIPE3(101 downto 70);
+	sig_ULA_zero_1 <= out_PIPE3(69);
+	sig_ULA_result_1 <= out_PIPE3(68 downto 37);
+	sig_dadoLido2_2 <= out_PIPE3(36 downto 5);
+	sig_RegEsc_1 <= out_PIPE3(4 downto 0);
+
+	sig_fontePC <= sig_DvC_2 and sig_ULA_zero_1;
+
+	memD: memData PORT MAP (
+		address	 => sig_ULA_result_1,
+		clock	 => clk,
+		data => sig_dadoLido2_2,
+		wren => sig_escMem_2,
+		q	 => sig_OUT_memD
+	);
+
+	in_PIPE4 <= sig_memParaReg_2 & sig_escReg_2 & sig_OUT_memD & sig_ULA_result_1 & sig_RegEsc_1;
+
+	PIPE4: flipflop GENERIC MAP (DATA_WIDTH => 71) PORT MAP (
+		clk => clk,
+		rst => rst,
+		D => in_PIPE4,
+		Q => out_PIPE4
+	);
+
+	-- QUINTO ESTÁGIO --
+
+	sig_memParaReg_3 <= out_PIPE4(70);
+	sig_escReg_3 <= out_PIPE4(69);
+	sig_OUT_memD_1 <= out_PIPE4(68 downto 37);
+	sig_ULA_result_2 <= out_PIPE4(36 downto 5);
+	sig_RegEsc_2 <= out_PIPE4(5 downto 0);
+
+	muxEscReg2: mux2to1 PORT MAP (
+		sel => sig_memParaReg_3,
+		A => sig_OUT_memD_1,
+		B => sig_ULA_result_2,
+		X => sig_regData
+	);
 
 end rtl;
