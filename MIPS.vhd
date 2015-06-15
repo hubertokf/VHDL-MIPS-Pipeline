@@ -10,7 +10,33 @@ entity MIPS is
 end MIPS;
 
 architecture rtl of MIPS is
-	signal sig_in_PC, sig_out_PC : std_logic_vector(9 downto 0);
+	signal sig_in_PC, sig_out_PC, sig_OUT_PCP4_2, sig_OUT_PCP4_3, sig_ULA_result_1 : std_logic_vector(9 downto 0);
+	signal sig_OUT_PCP4_1, sig_OUT_jump, sig_OUT_memI_1, sig_inst, sig_regData, sig_dadoLido1, sig_dadoLido2,
+	sig_imediate_ext, sig_dadoLido1_1,sig_dadoLido2_1, sig_imediate_ext_1, sig_somInPC, sig_OUT_PCP4_3,
+	sig_ulaFonte_1, sig_dadoLido2_1, sig_imediate_ext_1, sig_IN2_ULA, sig ula sig_ULA_result, 
+	sig sig_RegEsc_0, sig_OUT_jump_1, sig_ULA_result_1, sig_dadoLido2_2, sig_OUT_memD, 
+	sig_OUT_memD_1, sig_ULA_result_2, sig_regData: std_logic_vector(31 downto 0);
+	signal in_PIPE1, out_PIPE1: std_logic_vector(41 downto 0);
+	signal sig_opcode, sig_function, sig_RegEsc_2 : std_logic_vector(5 downto 0);
+	signal sig_ReadReg1, sig_ReadReg2, sig_regDest, sig_RegEsc, sig_ReadReg2_1, sig_regDest_1,
+	sig_RegEsc_1 : std_logic_vector (4 downto 0);
+	signal sig_imediate: std_logic_vector(15 downto 0);
+	signal sig_ulaOp, sig_ulaOp_1: std_logic_vector(1 downto 0);
+	signal sig_regDest, sig_regDest_1, sig_ulaFonte, sig_ulaFonte_1, sig_escMem, sig_escMem_1, sig_lerMem, 
+	sig_lerMem_1, sig_DvC, sig_DvC_1, sig_memParaReg, sig_memParaReg_1, sig_fontePC, clk, rst, we3, 
+	sig_escReg_1, ula sig_ULA_zero, sig ula sig_ULA_over, sig sig_RegDST, sig_escMem_2, sig_lerMem_2,
+	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, 
+	sig_memParaReg_3: STD_LOGIC;
+	signal in_PIPE2, out_pipe2: std_logic_vector( 124 downto 0);
+	signal sig_operULA: std_logic_vector(3 downto 0);
+	signal in_PIPE3,  out_PIPE3: std_logic_vector (106 downto 0);
+	signal in_PIPE4, out_PIPE4: std_logic_vector(71 downto 0);
+
+
+
+
+
+
 
 	component reg
 		generic(
@@ -93,7 +119,7 @@ architecture rtl of MIPS is
 	
 	component controller
 		PORT (
-			opcode : IN std_logic_vector(4 downto 0);
+			opcode : IN std_logic_vector(5 downto 0);
 			ulaOp : out std_logic_vector(1 downto 0);
 			RegDst, ulaFonte, escMem, lerMem, DvC, memParaReg, escReg : out std_logic
 		);
@@ -234,11 +260,11 @@ begin
 	sig_regDest_1 <= out_PIPE2(4 downto 0);
 
 	sig_somInPC <= sig_imediate_ext_1(31 downto 2) & "00";
-	sig_OUT_PCP4_3_32 <= "000000000000" & sig_OUT_PCP4_3;
+	sig_OUT_PCP4_3_32 <= "0000000000000000000000" & sig_OUT_PCP4_3;
 
 	inPC: addSub GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
-		a => sig_OUT_PCP4_3_32,
-		b => sig_somInPC, 
+		a => sig_OUT_PCP4_3_32, --a de 10 bits manda pra 32b?--
+		b => sig_somInPC,       --b de 10 recebe de 32 --  
 		add_sub => '1',
 		result => sig_OUT_jump
 	);
