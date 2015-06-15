@@ -13,7 +13,7 @@ END opULA;
 
 ARCHITECTURE rtl OF opULA IS	 
 BEGIN
-	process
+	process(ULAop,funct)
 	begin
 		CASE ULAop IS
 			WHEN "00" => 

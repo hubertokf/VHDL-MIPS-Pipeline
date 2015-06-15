@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 
 ENTITY controller IS
 	PORT (
-		opcode : IN std_logic_vector(4 downto 0);
+		opcode : IN std_logic_vector(5 downto 0);
 		ulaOp : out std_logic_vector(1 downto 0);
 		RegDst, ulaFonte, escMem, lerMem, DvC, memParaReg, escReg: out std_logic
 	);
@@ -13,7 +13,7 @@ END controller;
 
 ARCHITECTURE rtl OF controller IS	 
 BEGIN
-	process
+	process(opcode)
 	begin
 		CASE opcode IS
 			WHEN "000000" => -- R type

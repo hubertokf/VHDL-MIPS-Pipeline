@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="MIPS">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS|memData:memD|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_74d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MIPS|memInst:memI|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_b5d1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
