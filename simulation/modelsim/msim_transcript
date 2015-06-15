@@ -1,0 +1,1185 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do MIPS_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+vcom -reportprogress 300 -work work C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MIPS_vhd_tst
+# -- Compiling architecture MIPS_arch of MIPS_vhd_tst
+# ** Error: C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht(56): Illegal target for signal assignment.
+# ** Error: C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht(56): (vcom-1136) Unknown identifier "reset".
+# 
+# ** Error: C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht(57): Enumeration literal '0' is not of type (error).
+# ** Error: C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht(65): VHDL Compiler exiting
+vcom -reportprogress 300 -work work C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MIPS_vhd_tst
+# -- Compiling architecture MIPS_arch of MIPS_vhd_tst
+vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst
+# vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mips_vhd_tst(mips_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.mips(rtl)
+# Loading work.pc(rtl)
+# Loading work.mux2to1(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.addsub(rtl)
+# Loading work.meminst(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.flipflop(rtl)
+# Loading work.controller(rtl)
+# Loading work.array32(body)
+# Loading work.regbank(rtl)
+# Loading work.reg(rtl)
+# Loading work.mux32to1(rtl)
+# Loading work.dec5to1(rtl)
+# Loading work.signalextensor(rtl)
+# Loading work.opula(rtl)
+# Loading work.ula(rtl)
+# Loading work.memdata(syn)
+# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/ULA1/over has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/outf(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
+# do MIPS_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+add wave -position end  sim:/mips_vhd_tst/clk
+add wave -position end  sim:/mips_vhd_tst/outf
+add wave -position end  sim:/mips_vhd_tst/rst
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/wave.do
+do MIPS_run_msim_rtl_vhdl1.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./MIPS_run_msim_rtl_vhdl1.do line 25
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}"
+do MIPS_run_msim_rtl_vhdl1.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./MIPS_run_msim_rtl_vhdl1.do line 25
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}"
+do MIPS_run_msim_rtl_vhdl1.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./MIPS_run_msim_rtl_vhdl1.do line 25
+# C:/altera/13.0sp1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/mul32seq.vht}"
+do MIPS_run_msim_rtl_vhdl1.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/MIPS.vht}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MIPS_vhd_tst
+# -- Compiling architecture MIPS_arch of MIPS_vhd_tst
+# 
+# vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
+# vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mips_vhd_tst(mips_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.mips(rtl)
+# Loading work.pc(rtl)
+# Loading work.mux2to1(behavioral)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading work.addsub(rtl)
+# Loading work.meminst(syn)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+# Loading work.flipflop(rtl)
+# Loading work.controller(rtl)
+# Loading work.array32(body)
+# Loading work.regbank(rtl)
+# Loading work.reg(rtl)
+# Loading work.mux32to1(rtl)
+# Loading work.dec5to1(rtl)
+# Loading work.signalextensor(rtl)
+# Loading work.opula(rtl)
+# Loading work.ula(rtl)
+# Loading work.memdata(syn)
+# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/ULA1/over has no driver.
+# 
+# This port will contribute value (U) to the signal network.
+# 
+# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/outf(31 downto 0) has no driver.
+# 
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+# 
+# do MIPS_run_msim_rtl_vhdl.do 
+# transcript on
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dec5to1
+# -- Compiling architecture rtl of dec5to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package array32
+# -- Compiling package body array32
+# -- Loading package array32
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture rtl of reg
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity addSub
+# -- Compiling architecture rtl of addSub
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavioral of mux2to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture rtl of PC
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity signalExtensor
+# -- Compiling architecture rtl of signalExtensor
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity controller
+# -- Compiling architecture rtl of controller
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity flipflop
+# -- Compiling architecture rtl of flipflop
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture rtl of ULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity opULA
+# -- Compiling architecture rtl of opULA
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity MIPS
+# -- Compiling architecture rtl of MIPS
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memInst
+# -- Compiling architecture SYN of meminst
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity memData
+# -- Compiling architecture SYN of memdata
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package array32
+# -- Compiling entity mux32to1
+# -- Compiling architecture rtl of mux32to1
+# vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package array32
+# -- Compiling entity regBank
+# -- Compiling architecture rtl of regBank
+# 
+# 
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /mips_vhd_tst/clk
+# add wave -noupdate /mips_vhd_tst/outf
+# add wave -noupdate /mips_vhd_tst/rst
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 177
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ns
+# update
+# WaveRestoreZoom {0 ps} {945 ps}
+# 
+# run 1000ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/ULA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/inPC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/inPC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/PCP4
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /mips_vhd_tst/i1/ULA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /mips_vhd_tst/i1/ULA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /mips_vhd_tst/i1/ULA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /mips_vhd_tst/i1/inPC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /mips_vhd_tst/i1/inPC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 20 ns  Iteration: 5  Instance: /mips_vhd_tst/i1/ULA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 30 ns  Iteration: 2  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 1  Instance: /mips_vhd_tst/i1/memD/altsyncram_component
+# 
+# wave zoom full
+# 0 ps
+# 1050 ns

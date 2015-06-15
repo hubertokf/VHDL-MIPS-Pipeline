@@ -1,5 +1,5 @@
 Flow report for MIPS
-Mon Jun 15 00:52:02 2015
+Mon Jun 15 00:56:41 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 15 00:52:02 2015           ;
+; Flow Status                        ; Successful - Mon Jun 15 00:56:40 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
@@ -105,6 +105,7 @@ applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 530 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 406 MB              ; 00:00:00                           ;
 ; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
@@ -115,6 +116,7 @@ applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
 ; Analysis & Synthesis ; Huberto-PC       ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; Huberto-PC       ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -122,6 +124,7 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
+quartus_eda --read_settings_files=on --write_settings_files=off MIPS -c MIPS --gen_testbench
 
 
 
