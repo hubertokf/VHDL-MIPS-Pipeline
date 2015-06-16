@@ -34,13 +34,11 @@ ARCHITECTURE MIPS_arch OF MIPS_vhd_tst IS
 	-- constants                                                 
 	-- signals                                                   
 	SIGNAL clk : STD_LOGIC;
-	SIGNAL outf : STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL rst : STD_LOGIC;
 	
 	COMPONENT MIPS
 		PORT (
 			clk : IN STD_LOGIC;
-			outf : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 			rst : IN STD_LOGIC
 		);
 	END COMPONENT;
@@ -49,7 +47,6 @@ BEGIN
 	i1 : MIPS PORT MAP (
 		-- list connections between master ports and signals
 		clk => clk,
-		outf => outf,
 		rst => rst
 	);
 

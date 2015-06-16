@@ -4,19 +4,17 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MIPS is
     Port (
-		clk, rst: in std_logic;
-		outf: out std_logic_vector(31 downto 0)
+		clk, rst: in std_logic
 	 );
 end MIPS;
 
 architecture rtl of MIPS is
-	signal sig_in_PC, sig_out_PC, sig_OUT_PCP4_2, sig_OUT_PCP4_3, sig_OUT_PCP4_1 : std_logic_vector(9 downto 0);
-	signal sig_OUT_jump, sig_OUT_memI_1, sig_inst, sig_regData, sig_dadoLido1, sig_dadoLido2,
+	signal sig_OUT_PCP4_2, sig_OUT_jump, sig_OUT_memI_1, sig_inst, sig_regData, sig_dadoLido1, sig_dadoLido2,
 	sig_imediate_ext, sig_dadoLido1_1,sig_dadoLido2_1, sig_imediate_ext_1, sig_somInPC,
-	sig_IN2_ULA, sig_ULA_result, sig_OUT_PCP4_3_32,
+	sig_IN2_ULA, sig_ULA_result, sig_OUT_PCP4_3, sig_in_PC, sig_out_PC,
 	sig_OUT_jump_1, sig_ULA_result_1, sig_dadoLido2_2, sig_OUT_memD, 
-	sig_OUT_memD_1, sig_ULA_result_2: std_logic_vector(31 downto 0);
-	signal in_PIPE1, out_PIPE1: std_logic_vector(41 downto 0);
+	sig_OUT_memD_1, sig_ULA_result_2, sig_OUT_PCP4_1: std_logic_vector(31 downto 0);
+	signal in_PIPE1, out_PIPE1: std_logic_vector(63 downto 0);
 	signal sig_opcode, sig_function : std_logic_vector(5 downto 0);
 	signal sig_ReadReg1, sig_ReadReg2, sig_regDest, sig_RegEsc, sig_ReadReg2_1, sig_regDest_1,
 	sig_RegEsc_1, sig_RegEsc_0, sig_RegEsc_2 : std_logic_vector (4 downto 0);
@@ -26,16 +24,10 @@ architecture rtl of MIPS is
 	sig_lerMem_1, sig_DvC, sig_DvC_1, sig_memParaReg, sig_memParaReg_1, sig_fontePC, we3, 
 	sig_escReg_1, sig_ULA_zero, sig_ULA_over, sig_RegDST, sig_escMem_2, sig_lerMem_2,
 	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1 : STD_LOGIC;
-	signal in_PIPE2, out_pipe2: std_logic_vector( 124 downto 0);
+	signal in_PIPE2, out_pipe2: std_logic_vector( 146 downto 0);
 	signal sig_operULA: std_logic_vector(3 downto 0);
 	signal in_PIPE3,  out_PIPE3: std_logic_vector (106 downto 0);
 	signal in_PIPE4, out_PIPE4: std_logic_vector(70 downto 0);
-
-
-
-
-
-
 
 	component reg
 		generic(
@@ -158,29 +150,29 @@ begin
 	
 	-- PRIMEIRO ESTÁGIO --
 	
-	PC1: PC GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
+	PC1: PC GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		clk => clk,
 		rst => rst,
 		D => sig_in_PC,
 		Q => sig_out_PC
 	);
 	
-	mux_IN_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
+	mux_IN_PC: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_fontePC,
 		A => sig_OUT_PCP4_1,
-		B => sig_OUT_jump_1(9 downto 0),
+		B => sig_OUT_jump_1,
 		X => sig_in_PC
 	);
 	
-	PCP4: addSub GENERIC MAP (DATA_WIDTH => 10) PORT MAP (
+	PCP4: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		a => sig_out_PC,
-		b => "0000000100", -- 4
+		b => "00000000000000000000000000000100", -- 4
 		add_sub => '1',
 		result => sig_OUT_PCP4_1
 	);
 	
 	memI: memInst PORT MAP (
-		address	 => sig_out_PC,
+		address	 => sig_out_PC(11 downto 2),
 		clock	 => clk,
 		data => (others => '0'),
 		wren => '0',
@@ -189,7 +181,7 @@ begin
 	
 	in_PIPE1 <= sig_OUT_PCP4_1 & sig_OUT_memI_1;
 	
-	PIPE1: flipflop GENERIC MAP (DATA_WIDTH => 42) PORT MAP (
+	PIPE1: flipflop GENERIC MAP (DATA_WIDTH => 64) PORT MAP (
 		clk => clk,
 		rst => rst,
 		D => in_PIPE1,
@@ -198,8 +190,9 @@ begin
 	
 	-- SEGUNDO ESTÁGIO --
 	
-	sig_OUT_PCP4_2 <= out_PIPE1(9 downto 0);
-	sig_inst <= out_PIPE1(41 downto 10);
+	sig_OUT_PCP4_2 <= out_PIPE1(63 downto 32);
+	sig_inst <= out_PIPE1(31 downto 0);
+	
 	sig_opcode <= sig_inst(31 downto 26);
 	sig_ReadReg1 <= sig_inst(25 downto 21);
 	sig_ReadReg2 <= sig_inst(20 downto 16);
@@ -237,7 +230,7 @@ begin
 
 	in_PIPE2 <= sig_ulaOp & sig_RegDST & sig_ulaFonte & sig_escMem & sig_lerMem & sig_DvC & sig_memParaReg & sig_escReg & sig_OUT_PCP4_2 & sig_dadoLido1 & sig_dadoLido2 & sig_imediate_ext & sig_ReadReg2 & sig_regDest;
 
-	PIPE2: flipflop GENERIC MAP (DATA_WIDTH => 125) PORT MAP (
+	PIPE2: flipflop GENERIC MAP (DATA_WIDTH => 147) PORT MAP (
 		clk => clk,
 		rst => rst,
 		D => in_PIPE2,
@@ -246,15 +239,15 @@ begin
 
 	-- TERCEIRO ESTÁGIO --
 
-	sig_ulaOp_1 <= out_PIPE2(124 downto 123);
-	sig_RegDST_1 <= out_PIPE2(122);
-	sig_ulaFonte_1 <= out_PIPE2(121);
-	sig_escMem_1 <= out_PIPE2(120);
-	sig_lerMem_1 <= out_PIPE2(119);
-	sig_DvC_1 <= out_PIPE2(118);
-	sig_memParaReg_1 <= out_PIPE2(117);
-	sig_escReg_1 <= out_PIPE2(116);
-	sig_OUT_PCP4_3 <= out_PIPE2(115 downto 106);
+	sig_ulaOp_1 <= out_PIPE2(146 downto 145);
+	sig_RegDST_1 <= out_PIPE2(144);
+	sig_ulaFonte_1 <= out_PIPE2(143);
+	sig_escMem_1 <= out_PIPE2(142);
+	sig_lerMem_1 <= out_PIPE2(141);
+	sig_DvC_1 <= out_PIPE2(140);
+	sig_memParaReg_1 <= out_PIPE2(139);
+	sig_escReg_1 <= out_PIPE2(138);
+	sig_OUT_PCP4_3 <= out_PIPE2(137 downto 106);
 	sig_dadoLido1_1 <= out_PIPE2(105 downto 74);
 	sig_dadoLido2_1 <= out_PIPE2(73 downto 42);
 	sig_imediate_ext_1 <= out_PIPE2(41 downto 10);
@@ -263,10 +256,9 @@ begin
 	sig_regDest_1 <= out_PIPE2(4 downto 0);
 
 	sig_somInPC <= sig_imediate_ext_1(31 downto 2) & "00";
-	sig_OUT_PCP4_3_32 <= "0000000000000000000000" & sig_OUT_PCP4_3;
 
 	inPC: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
-		a => sig_OUT_PCP4_3_32, --a de 10 bits manda pra 32b?--
+		a => sig_OUT_PCP4_3,
 		b => sig_somInPC,       --b de 10 recebe de 32 --  
 		add_sub => '1',
 		result => sig_OUT_jump
