@@ -34,13 +34,16 @@ add wave -noupdate -group controle -label sig_lerMem /mips_vhd_tst/i1/sig_lerMem
 add wave -noupdate -group controle -label sig_DvC /mips_vhd_tst/i1/sig_DvC
 add wave -noupdate -group controle -label sig_memParaReg /mips_vhd_tst/i1/sig_memParaReg
 add wave -noupdate -group controle -label sig_escReg /mips_vhd_tst/i1/sig_escReg
-add wave -noupdate -group {Banco Registradores} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
-add wave -noupdate -group {Banco Registradores} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
-add wave -noupdate -group {Banco Registradores} -label sig_RegEsc_2 /mips_vhd_tst/i1/sig_RegEsc_2
-add wave -noupdate -group {Banco Registradores} -label sig_escReg_3 /mips_vhd_tst/i1/sig_escReg_3
-add wave -noupdate -group {Banco Registradores} -label sig_regData /mips_vhd_tst/i1/sig_regData
-add wave -noupdate -group {Banco Registradores} -label sig_dadoLido1 /mips_vhd_tst/i1/sig_dadoLido1
-add wave -noupdate -group {Banco Registradores} -label sig_dadoLido2 /mips_vhd_tst/i1/sig_dadoLido2
+add wave -noupdate -expand -group {Banco Registradores} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
+add wave -noupdate -expand -group {Banco Registradores} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
+add wave -noupdate -expand -group {Banco Registradores} -label sig_RegEsc_2 /mips_vhd_tst/i1/sig_RegEsc_2
+add wave -noupdate -expand -group {Banco Registradores} -label sig_escReg_3 /mips_vhd_tst/i1/sig_escReg_3
+add wave -noupdate -expand -group {Banco Registradores} -label sig_regData /mips_vhd_tst/i1/sig_regData
+add wave -noupdate -expand -group {Banco Registradores} -label sig_dadoLido1 /mips_vhd_tst/i1/sig_dadoLido1
+add wave -noupdate -expand -group {Banco Registradores} -label sig_dadoLido2 /mips_vhd_tst/i1/sig_dadoLido2
+add wave -noupdate -expand -group {Banco Registradores} -label OregImux /mips_vhd_tst/i1/registradores/OregImux
+add wave -noupdate -expand -group {Banco Registradores} -label Odec /mips_vhd_tst/i1/registradores/Odec
+add wave -noupdate -expand -group {Banco Registradores} -label Ien /mips_vhd_tst/i1/registradores/Ien
 add wave -noupdate -group {Extensor de sinal} -label sig_imediate /mips_vhd_tst/i1/sig_imediate
 add wave -noupdate -group {Extensor de sinal} -label sig_imediate_ext /mips_vhd_tst/i1/sig_imediate_ext
 add wave -noupdate -group {IN PIPE 2} -label sig_ulaOp /mips_vhd_tst/i1/sig_ulaOp
@@ -140,12 +143,12 @@ add wave -noupdate -group {OUT PIPE 4} -label sig_escReg_3 /mips_vhd_tst/i1/sig_
 add wave -noupdate -group {OUT PIPE 4} -label sig_OUT_memD_1 /mips_vhd_tst/i1/sig_OUT_memD_1
 add wave -noupdate -group {OUT PIPE 4} -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
 add wave -noupdate -group {OUT PIPE 4} -label sig_RegEsc_2 /mips_vhd_tst/i1/sig_RegEsc_2
-add wave -noupdate -group muxEscReg2 -label sig_memParaReg_3 /mips_vhd_tst/i1/sig_memParaReg_3
-add wave -noupdate -group muxEscReg2 -label sig_OUT_memD_1 /mips_vhd_tst/i1/sig_OUT_memD_1
-add wave -noupdate -group muxEscReg2 -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
-add wave -noupdate -group muxEscReg2 /mips_vhd_tst/i1/sig_regData
+add wave -noupdate -expand -group muxEscReg2 -label sig_memParaReg_3 /mips_vhd_tst/i1/sig_memParaReg_3
+add wave -noupdate -expand -group muxEscReg2 -label sig_OUT_memD_1 /mips_vhd_tst/i1/sig_OUT_memD_1
+add wave -noupdate -expand -group muxEscReg2 -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
+add wave -noupdate -expand -group muxEscReg2 -label sig_regData /mips_vhd_tst/i1/sig_regData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {50946 ps} 0}
+WaveRestoreCursors {{Cursor 1} {194954 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 172
 configure wave -valuecolwidth 100
@@ -161,4 +164,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {26236 ps} {59052 ps}
+WaveRestoreZoom {0 ps} {561402 ps}
