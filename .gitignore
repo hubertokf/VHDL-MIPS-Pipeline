@@ -17,3 +17,6 @@ simulation/modelsim/msim_transcript
 *.prw
 simulation/modelsim/rtl_work/_info
 *.wlf
+MIPS.qws
+db/MIPS.tmw_info
+db/MIPS.ipinfo
