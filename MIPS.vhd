@@ -344,8 +344,8 @@ begin
 
 	muxEscReg2: mux2to1 GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		sel => sig_memParaReg_3,
-		A => sig_OUT_memD_1,
-		B => sig_ULA_result_2,
+		A => sig_ULA_result_2,
+		B => sig_OUT_memD_1,
 		X => sig_regData
 	);
 
