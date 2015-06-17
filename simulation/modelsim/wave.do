@@ -1,7 +1,7 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -group Geradores -label rst /mips_vhd_tst/rst
-add wave -noupdate -group Geradores -label clk /mips_vhd_tst/clk
+add wave -noupdate -expand -group Geradores -label rst /mips_vhd_tst/rst
+add wave -noupdate -expand -group Geradores -label clk /mips_vhd_tst/clk
 add wave -noupdate -divider {Estágio 1}
 add wave -noupdate -group PC1 -label sig_in_PC /mips_vhd_tst/i1/sig_in_PC
 add wave -noupdate -group PC1 -label sig_out_PC /mips_vhd_tst/i1/sig_out_PC
@@ -18,29 +18,29 @@ add wave -noupdate -group {IN PIPE 1} -label sig_OUT_memI_1 /mips_vhd_tst/i1/sig
 add wave -noupdate -group {PIPE 1} -label in_PIPE1 /mips_vhd_tst/i1/in_PIPE1
 add wave -noupdate -group {PIPE 1} -label out_PIPE1 /mips_vhd_tst/i1/out_PIPE1
 add wave -noupdate -divider {Estágio 2}
-add wave -noupdate -group {OUT PIPE 1} -label sig_OUT_PCP4_2 /mips_vhd_tst/i1/sig_OUT_PCP4_2
-add wave -noupdate -group {OUT PIPE 1} -label sig_inst /mips_vhd_tst/i1/sig_inst
-add wave -noupdate -group {OUT PIPE 1} -label sig_opcode /mips_vhd_tst/i1/sig_opcode
-add wave -noupdate -group {OUT PIPE 1} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
-add wave -noupdate -group {OUT PIPE 1} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
-add wave -noupdate -group {OUT PIPE 1} -label sig_imediate /mips_vhd_tst/i1/sig_imediate
-add wave -noupdate -group {OUT PIPE 1} -label sig_regDest /mips_vhd_tst/i1/sig_regDest
-add wave -noupdate -group controle -label sig_opcode /mips_vhd_tst/i1/sig_opcode
-add wave -noupdate -group controle -label sig_ulaOp /mips_vhd_tst/i1/sig_ulaOp
-add wave -noupdate -group controle -label sig_RegDST /mips_vhd_tst/i1/sig_RegDST
-add wave -noupdate -group controle -label sig_ulaFonte /mips_vhd_tst/i1/sig_ulaFonte
-add wave -noupdate -group controle -label sig_escMem /mips_vhd_tst/i1/sig_escMem
-add wave -noupdate -group controle -label sig_lerMem /mips_vhd_tst/i1/sig_lerMem
-add wave -noupdate -group controle -label sig_DvC /mips_vhd_tst/i1/sig_DvC
-add wave -noupdate -group controle -label sig_memParaReg /mips_vhd_tst/i1/sig_memParaReg
-add wave -noupdate -group controle -label sig_escReg /mips_vhd_tst/i1/sig_escReg
-add wave -noupdate -group {Banco Registradores} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
-add wave -noupdate -group {Banco Registradores} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
-add wave -noupdate -group {Banco Registradores} -label sig_escReg_2 /mips_vhd_tst/i1/sig_escReg_2
-add wave -noupdate -group {Banco Registradores} -label sig_escReg_3 /mips_vhd_tst/i1/sig_escReg_3
-add wave -noupdate -group {Banco Registradores} -label sig_regData /mips_vhd_tst/i1/sig_regData
-add wave -noupdate -group {Banco Registradores} -label sig_dadoLido1 /mips_vhd_tst/i1/sig_dadoLido1
-add wave -noupdate -group {Banco Registradores} -label sig_dadoLido2 /mips_vhd_tst/i1/sig_dadoLido2
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_OUT_PCP4_2 /mips_vhd_tst/i1/sig_OUT_PCP4_2
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_inst /mips_vhd_tst/i1/sig_inst
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_opcode /mips_vhd_tst/i1/sig_opcode
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_imediate /mips_vhd_tst/i1/sig_imediate
+add wave -noupdate -expand -group {OUT PIPE 1} -label sig_regDest /mips_vhd_tst/i1/sig_regDest
+add wave -noupdate -expand -group controle -label sig_opcode /mips_vhd_tst/i1/sig_opcode
+add wave -noupdate -expand -group controle -label sig_ulaOp /mips_vhd_tst/i1/sig_ulaOp
+add wave -noupdate -expand -group controle -label sig_RegDST /mips_vhd_tst/i1/sig_RegDST
+add wave -noupdate -expand -group controle -label sig_ulaFonte /mips_vhd_tst/i1/sig_ulaFonte
+add wave -noupdate -expand -group controle -label sig_escMem /mips_vhd_tst/i1/sig_escMem
+add wave -noupdate -expand -group controle -label sig_lerMem /mips_vhd_tst/i1/sig_lerMem
+add wave -noupdate -expand -group controle -label sig_DvC /mips_vhd_tst/i1/sig_DvC
+add wave -noupdate -expand -group controle -label sig_memParaReg /mips_vhd_tst/i1/sig_memParaReg
+add wave -noupdate -expand -group controle -label sig_escReg /mips_vhd_tst/i1/sig_escReg
+add wave -noupdate -expand -group {Banco Registradores} -label sig_ReadReg1 /mips_vhd_tst/i1/sig_ReadReg1
+add wave -noupdate -expand -group {Banco Registradores} -label sig_ReadReg2 /mips_vhd_tst/i1/sig_ReadReg2
+add wave -noupdate -expand -group {Banco Registradores} -label sig_RegEsc_2 /mips_vhd_tst/i1/sig_RegEsc_2
+add wave -noupdate -expand -group {Banco Registradores} -label sig_escReg_3 /mips_vhd_tst/i1/sig_escReg_3
+add wave -noupdate -expand -group {Banco Registradores} -label sig_regData /mips_vhd_tst/i1/sig_regData
+add wave -noupdate -expand -group {Banco Registradores} -label sig_dadoLido1 /mips_vhd_tst/i1/sig_dadoLido1
+add wave -noupdate -expand -group {Banco Registradores} -label sig_dadoLido2 /mips_vhd_tst/i1/sig_dadoLido2
 add wave -noupdate -group {Extensor de sinal} -label sig_imediate /mips_vhd_tst/i1/sig_imediate
 add wave -noupdate -group {Extensor de sinal} -label sig_imediate_ext /mips_vhd_tst/i1/sig_imediate_ext
 add wave -noupdate -group {IN PIPE 2} -label sig_ulaOp /mips_vhd_tst/i1/sig_ulaOp
@@ -145,7 +145,7 @@ add wave -noupdate -group muxEscReg2 -label sig_OUT_memD_1 /mips_vhd_tst/i1/sig_
 add wave -noupdate -group muxEscReg2 -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
 add wave -noupdate -group muxEscReg2 /mips_vhd_tst/i1/sig_regData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {6694 ps} 0}
+WaveRestoreCursors {{Cursor 1} {30000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 172
 configure wave -valuecolwidth 100
@@ -161,4 +161,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {36271 ps}
+WaveRestoreZoom {16365 ps} {38197 ps}

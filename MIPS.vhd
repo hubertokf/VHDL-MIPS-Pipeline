@@ -23,7 +23,7 @@ architecture rtl of MIPS is
 	signal sig_ulaFonte, sig_ulaFonte_1, sig_escMem, sig_escMem_1, sig_lerMem, 
 	sig_lerMem_1, sig_DvC, sig_DvC_1, sig_memParaReg, sig_memParaReg_1, sig_fontePC, we3, 
 	sig_escReg_1, sig_ULA_zero, sig_ULA_over, sig_RegDST, sig_escMem_2, sig_lerMem_2,
-	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1 : STD_LOGIC;
+	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1, notclock : STD_LOGIC;
 	signal in_PIPE2, out_pipe2: std_logic_vector( 146 downto 0);
 	signal sig_operULA: std_logic_vector(3 downto 0);
 	signal in_PIPE3,  out_PIPE3: std_logic_vector (106 downto 0);
@@ -170,10 +170,10 @@ begin
 		add_sub => '1',
 		result => sig_OUT_PCP4_1
 	);
-	
+	notclock <= not clk;
 	memI: memInst PORT MAP (
 		address	 => sig_out_PC(11 downto 2),
-		clock	 => clk,
+		clock	 => notclock,
 		data => (others => '0'),
 		wren => '0',
 		q	 => sig_OUT_memI_1

@@ -1,12 +1,12 @@
 |MIPS
 clk => PC:PC1.clk
-clk => memInst:memI.clock
 clk => flipflop:PIPE1.clk
 clk => regbank:registradores.clk
 clk => flipflop:PIPE2.clk
 clk => flipflop:PIPE3.clk
 clk => memData:memD.clock
 clk => flipflop:PIPE4.clk
+clk => memInst:memI.clock
 rst => PC:PC1.rst
 rst => flipflop:PIPE1.rst
 rst => regbank:registradores.rst
