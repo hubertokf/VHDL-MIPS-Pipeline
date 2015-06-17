@@ -20,3 +20,5 @@ simulation/modelsim/rtl_work/_info
 MIPS.qws
 db/MIPS.tmw_info
 db/MIPS.ipinfo
+db/MIPS.db_info
+*.db_info
