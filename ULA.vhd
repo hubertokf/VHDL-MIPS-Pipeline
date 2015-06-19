@@ -16,7 +16,7 @@ end ULA;
 architecture rtl of ULA is
 	signal sig_output: std_logic_vector(31 downto 0);
 begin
-	process(oper)
+	process(oper, in0, in1)
 	begin
 		case oper is
 			when "0000" =>

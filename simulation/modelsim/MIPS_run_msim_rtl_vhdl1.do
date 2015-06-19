@@ -28,6 +28,6 @@ vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd
 
 do wave.do
 
-run 1000ns
+run 5000ns
 
 wave zoom full

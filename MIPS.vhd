@@ -255,7 +255,7 @@ begin
 	sig_ReadReg2_1 <= out_PIPE2(9 downto 5);
 	sig_regDest_1 <= out_PIPE2(4 downto 0);
 
-	sig_somInPC <= sig_imediate_ext_1(31 downto 2) & "00";
+	sig_somInPC <= sig_imediate_ext_1(29 downto 0) & "00";
 
 	inPC: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
 		a => sig_OUT_PCP4_3,

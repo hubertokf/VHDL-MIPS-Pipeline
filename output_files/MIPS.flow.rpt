@@ -1,5 +1,5 @@
 Flow report for MIPS
-Wed Jun 17 20:36:36 2015
+Fri Jun 19 04:36:44 2015
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Jun 17 20:36:36 2015           ;
+; Flow Status                        ; Successful - Fri Jun 19 04:36:44 2015           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/17/2015 20:36:34 ;
+; Start date & time ; 06/19/2015 04:36:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 9210264193161.143458419405764         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 28661167047129.143469940104800        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
 ; IP_TOOL_NAME                        ; RAM: 1-PORT                           ; --            ; --          ; --             ;
@@ -104,7 +104,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 518 MB              ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 527 MB              ; 00:00:02                           ;
 ; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
@@ -114,7 +114,7 @@ applicable agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; Huberto-PC       ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; Huberto-Note     ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
