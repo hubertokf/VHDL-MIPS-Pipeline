@@ -1,0 +1,1649 @@
+Analysis & Synthesis report for MIPS
+Wed Jun 17 20:36:36 2015
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated
+ 13. Source assignments for memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated
+ 14. Parameter Settings for User Entity Instance: PC:PC1
+ 15. Parameter Settings for User Entity Instance: mux2to1:mux_IN_PC
+ 16. Parameter Settings for User Entity Instance: addSub:PCP4
+ 17. Parameter Settings for User Entity Instance: memInst:memI|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: flipflop:PIPE1
+ 19. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:0:regb
+ 20. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:1:regb
+ 21. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:2:regb
+ 22. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:3:regb
+ 23. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:4:regb
+ 24. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:5:regb
+ 25. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:6:regb
+ 26. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:7:regb
+ 27. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:8:regb
+ 28. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:9:regb
+ 29. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:10:regb
+ 30. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:11:regb
+ 31. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:12:regb
+ 32. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:13:regb
+ 33. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:14:regb
+ 34. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:15:regb
+ 35. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:16:regb
+ 36. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:17:regb
+ 37. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:18:regb
+ 38. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:19:regb
+ 39. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:20:regb
+ 40. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:21:regb
+ 41. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:22:regb
+ 42. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:23:regb
+ 43. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:24:regb
+ 44. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:25:regb
+ 45. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:26:regb
+ 46. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:27:regb
+ 47. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:28:regb
+ 48. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:29:regb
+ 49. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:30:regb
+ 50. Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:31:regb
+ 51. Parameter Settings for User Entity Instance: flipflop:PIPE2
+ 52. Parameter Settings for User Entity Instance: addSub:inPC
+ 53. Parameter Settings for User Entity Instance: mux2to1:mux_IN_ULA_2
+ 54. Parameter Settings for User Entity Instance: mux2to1:muxEscReg
+ 55. Parameter Settings for User Entity Instance: flipflop:PIPE3
+ 56. Parameter Settings for User Entity Instance: memData:memD|altsyncram:altsyncram_component
+ 57. Parameter Settings for User Entity Instance: flipflop:PIPE4
+ 58. Parameter Settings for User Entity Instance: mux2to1:muxEscReg2
+ 59. altsyncram Parameter Settings by Entity Instance
+ 60. Port Connectivity Checks: "flipflop:PIPE3"
+ 61. Port Connectivity Checks: "ULA:ULA1"
+ 62. Port Connectivity Checks: "addSub:inPC"
+ 63. Port Connectivity Checks: "memInst:memI"
+ 64. Port Connectivity Checks: "addSub:PCP4"
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 17 20:36:36 2015           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; MIPS                                            ;
+; Top-level Entity Name              ; MIPS                                            ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; MIPS               ; MIPS               ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------+---------+
+; mux32to1.vhd                     ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd           ;         ;
+; dec5p1.vhd                       ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd             ;         ;
+; array32.vhd                      ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd            ;         ;
+; reg.vhd                          ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd                ;         ;
+; addSub.vhd                       ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd             ;         ;
+; mux2to1.vhd                      ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd            ;         ;
+; PC.vhd                           ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd                 ;         ;
+; regBank.vhd                      ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd            ;         ;
+; signalExtensor.vhd               ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd     ;         ;
+; controller.vhd                   ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd         ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd           ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd                ;         ;
+; opULA.vhd                        ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd              ;         ;
+; MIPS.vhd                         ; yes             ; User VHDL File                   ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd               ;         ;
+; memInst.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.mif            ;         ;
+; memInst.vhd                      ; yes             ; User Wizard-Generated File       ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd            ;         ;
+; memData.mif                      ; yes             ; User Memory Initialization File  ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.mif            ;         ;
+; memData.vhd                      ; yes             ; User Wizard-Generated File       ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd            ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc            ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc              ;         ;
+; db/altsyncram_b5d1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/db/altsyncram_b5d1.tdf ;         ;
+; db/altsyncram_74d1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/db/altsyncram_74d1.tdf ;         ;
++----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |MIPS                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |MIPS               ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                 ;
++--------+--------------+---------+--------------+--------------+--------------------+------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance    ; IP Include File                                                  ;
++--------+--------------+---------+--------------+--------------+--------------------+------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |MIPS|memData:memD ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |MIPS|memInst:memI ; C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                     ;
++---------------------------------------------------+--------------------+
+; Register name                                     ; Reason for Removal ;
++---------------------------------------------------+--------------------+
+; flipflop:PIPE4|Temp[0..70]                        ; Lost fanout        ;
+; flipflop:PIPE3|Temp[0..104,106]                   ; Lost fanout        ;
+; flipflop:PIPE2|Temp[0..140,142..146]              ; Lost fanout        ;
+; regBank:registradores|reg:\G2:31:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:30:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:29:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:28:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:27:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:26:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:25:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:24:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:23:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:22:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:21:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:20:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:19:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:18:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:17:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:16:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:15:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:14:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:13:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:12:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:11:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:10:regb|Temp[0..31] ; Lost fanout        ;
+; regBank:registradores|reg:\G2:9:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:8:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:7:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:6:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:5:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:4:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:3:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:2:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:1:regb|Temp[0..31]  ; Lost fanout        ;
+; regBank:registradores|reg:\G2:0:regb|Temp[0..31]  ; Lost fanout        ;
+; flipflop:PIPE1|Temp[0..63]                        ; Lost fanout        ;
+; PC:PC1|Temp[0..31]                                ; Lost fanout        ;
+; Total Number of Removed Registers = 1443          ;                    ;
++---------------------------------------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                         ;
++--------------------------+--------------------+-------------------------------------------------------------------------------------+
+; Register name            ; Reason for Removal ; Registers Removed due to This Register                                              ;
++--------------------------+--------------------+-------------------------------------------------------------------------------------+
+; flipflop:PIPE4|Temp[68]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[106], flipflop:PIPE3|Temp[42], flipflop:PIPE3|Temp[41],         ;
+;                          ;                    ; flipflop:PIPE3|Temp[40], flipflop:PIPE3|Temp[39], flipflop:PIPE3|Temp[38],          ;
+;                          ;                    ; flipflop:PIPE3|Temp[37], flipflop:PIPE3|Temp[36], flipflop:PIPE2|Temp[142],         ;
+;                          ;                    ; flipflop:PIPE2|Temp[79], flipflop:PIPE2|Temp[78], flipflop:PIPE2|Temp[77],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[76], flipflop:PIPE2|Temp[75], flipflop:PIPE2|Temp[74],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[47], flipflop:PIPE2|Temp[46], flipflop:PIPE2|Temp[45],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[44], flipflop:PIPE2|Temp[43], flipflop:PIPE2|Temp[42],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[15], flipflop:PIPE2|Temp[14], flipflop:PIPE2|Temp[13],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[12], flipflop:PIPE2|Temp[11], flipflop:PIPE2|Temp[10],          ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[0],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[5],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[4],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[3],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[2],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[1],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[0], flipflop:PIPE1|Temp[5],              ;
+;                          ;                    ; flipflop:PIPE1|Temp[4], flipflop:PIPE1|Temp[3], flipflop:PIPE1|Temp[2],             ;
+;                          ;                    ; flipflop:PIPE1|Temp[1], flipflop:PIPE1|Temp[0]                                      ;
+; flipflop:PIPE4|Temp[36]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[68], flipflop:PIPE2|Temp[143], flipflop:PIPE2|Temp[105],        ;
+;                          ;                    ; flipflop:PIPE2|Temp[104], flipflop:PIPE2|Temp[103], flipflop:PIPE2|Temp[102],       ;
+;                          ;                    ; flipflop:PIPE2|Temp[73], flipflop:PIPE2|Temp[41],                                   ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:31:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[28],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[31],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[30],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[29],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[28], flipflop:PIPE1|Temp[15]             ;
+; flipflop:PIPE3|Temp[101] ; Lost Fanouts       ; flipflop:PIPE2|Temp[137], flipflop:PIPE2|Temp[136], flipflop:PIPE2|Temp[135],       ;
+;                          ;                    ; flipflop:PIPE2|Temp[134], flipflop:PIPE2|Temp[133], flipflop:PIPE2|Temp[132],       ;
+;                          ;                    ; flipflop:PIPE2|Temp[131], flipflop:PIPE2|Temp[130], flipflop:PIPE1|Temp[63],        ;
+;                          ;                    ; flipflop:PIPE1|Temp[62], flipflop:PIPE1|Temp[61], flipflop:PIPE1|Temp[60],          ;
+;                          ;                    ; flipflop:PIPE1|Temp[59], flipflop:PIPE1|Temp[58], flipflop:PIPE1|Temp[57],          ;
+;                          ;                    ; flipflop:PIPE1|Temp[56], PC:PC1|Temp[31], PC:PC1|Temp[30], PC:PC1|Temp[29],         ;
+;                          ;                    ; PC:PC1|Temp[28], PC:PC1|Temp[27], PC:PC1|Temp[26], PC:PC1|Temp[25], PC:PC1|Temp[24] ;
+; flipflop:PIPE4|Temp[18]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[50], flipflop:PIPE2|Temp[87], flipflop:PIPE2|Temp[55],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[23], regBank:registradores|reg:\G2:31:regb|Temp[13],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[13],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[13], flipflop:PIPE1|Temp[13]             ;
+; flipflop:PIPE4|Temp[13]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[45], flipflop:PIPE2|Temp[82], flipflop:PIPE2|Temp[50],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[18], regBank:registradores|reg:\G2:31:regb|Temp[8],             ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[8],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[8], flipflop:PIPE1|Temp[8]               ;
+; flipflop:PIPE4|Temp[19]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[51], flipflop:PIPE2|Temp[88], flipflop:PIPE2|Temp[56],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[24], regBank:registradores|reg:\G2:31:regb|Temp[14],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[14],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[14], flipflop:PIPE1|Temp[14]             ;
+; flipflop:PIPE4|Temp[17]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[49], flipflop:PIPE2|Temp[86], flipflop:PIPE2|Temp[54],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[22], regBank:registradores|reg:\G2:31:regb|Temp[12],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[12],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[12], flipflop:PIPE1|Temp[12]             ;
+; flipflop:PIPE4|Temp[16]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[48], flipflop:PIPE2|Temp[85], flipflop:PIPE2|Temp[53],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[21], regBank:registradores|reg:\G2:31:regb|Temp[11],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[11],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[11], flipflop:PIPE1|Temp[11]             ;
+; flipflop:PIPE4|Temp[15]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[47], flipflop:PIPE2|Temp[84], flipflop:PIPE2|Temp[52],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[20], regBank:registradores|reg:\G2:31:regb|Temp[10],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[10],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[10], flipflop:PIPE1|Temp[10]             ;
+; flipflop:PIPE4|Temp[14]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[46], flipflop:PIPE2|Temp[83], flipflop:PIPE2|Temp[51],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[19], regBank:registradores|reg:\G2:31:regb|Temp[9],             ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[9],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[9], flipflop:PIPE1|Temp[9]               ;
+; flipflop:PIPE4|Temp[12]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[44], flipflop:PIPE2|Temp[81], flipflop:PIPE2|Temp[49],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[17], regBank:registradores|reg:\G2:31:regb|Temp[7],             ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[7],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[7], flipflop:PIPE1|Temp[7]               ;
+; flipflop:PIPE4|Temp[11]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[43], flipflop:PIPE2|Temp[80], flipflop:PIPE2|Temp[48],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[16], regBank:registradores|reg:\G2:31:regb|Temp[6],             ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[6],                                      ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[6], flipflop:PIPE1|Temp[6]               ;
+; flipflop:PIPE4|Temp[21]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[53], flipflop:PIPE2|Temp[90], flipflop:PIPE2|Temp[58],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[26], regBank:registradores|reg:\G2:31:regb|Temp[16],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[16],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[16]                                      ;
+; flipflop:PIPE4|Temp[30]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[62], flipflop:PIPE2|Temp[99], flipflop:PIPE2|Temp[67],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[35], regBank:registradores|reg:\G2:31:regb|Temp[25],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[25],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[25]                                      ;
+; flipflop:PIPE4|Temp[29]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[61], flipflop:PIPE2|Temp[98], flipflop:PIPE2|Temp[66],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[34], regBank:registradores|reg:\G2:31:regb|Temp[24],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[24],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[24]                                      ;
+; flipflop:PIPE4|Temp[28]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[60], flipflop:PIPE2|Temp[97], flipflop:PIPE2|Temp[65],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[33], regBank:registradores|reg:\G2:31:regb|Temp[23],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[23],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[23]                                      ;
+; flipflop:PIPE4|Temp[27]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[59], flipflop:PIPE2|Temp[96], flipflop:PIPE2|Temp[64],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[32], regBank:registradores|reg:\G2:31:regb|Temp[22],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[22],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[22]                                      ;
+; flipflop:PIPE4|Temp[26]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[58], flipflop:PIPE2|Temp[95], flipflop:PIPE2|Temp[63],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[31], regBank:registradores|reg:\G2:31:regb|Temp[21],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[21],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[21]                                      ;
+; flipflop:PIPE4|Temp[25]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[57], flipflop:PIPE2|Temp[94], flipflop:PIPE2|Temp[62],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[30], regBank:registradores|reg:\G2:31:regb|Temp[20],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[20],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[20]                                      ;
+; flipflop:PIPE4|Temp[24]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[56], flipflop:PIPE2|Temp[93], flipflop:PIPE2|Temp[61],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[29], regBank:registradores|reg:\G2:31:regb|Temp[19],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[19],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[19]                                      ;
+; flipflop:PIPE4|Temp[20]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[52], flipflop:PIPE2|Temp[89], flipflop:PIPE2|Temp[57],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[25], regBank:registradores|reg:\G2:31:regb|Temp[15],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[15],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[15]                                      ;
+; flipflop:PIPE4|Temp[32]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[64], flipflop:PIPE2|Temp[101], flipflop:PIPE2|Temp[69],         ;
+;                          ;                    ; flipflop:PIPE2|Temp[37], regBank:registradores|reg:\G2:31:regb|Temp[27],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[27],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[27]                                      ;
+; flipflop:PIPE4|Temp[31]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[63], flipflop:PIPE2|Temp[100], flipflop:PIPE2|Temp[68],         ;
+;                          ;                    ; flipflop:PIPE2|Temp[36], regBank:registradores|reg:\G2:31:regb|Temp[26],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[26],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[26]                                      ;
+; flipflop:PIPE4|Temp[23]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[55], flipflop:PIPE2|Temp[92], flipflop:PIPE2|Temp[60],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[28], regBank:registradores|reg:\G2:31:regb|Temp[18],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[18],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[18]                                      ;
+; flipflop:PIPE4|Temp[22]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[54], flipflop:PIPE2|Temp[91], flipflop:PIPE2|Temp[59],          ;
+;                          ;                    ; flipflop:PIPE2|Temp[27], regBank:registradores|reg:\G2:31:regb|Temp[17],            ;
+;                          ;                    ; regBank:registradores|reg:\G2:30:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:29:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:28:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:27:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:26:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:25:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:24:regb|Temp[17],                                     ;
+;                          ;                    ; regBank:registradores|reg:\G2:23:regb|Temp[17]                                      ;
+; flipflop:PIPE1|Temp[31]  ; Lost Fanouts       ; PC:PC1|Temp[7], PC:PC1|Temp[6], PC:PC1|Temp[5], PC:PC1|Temp[4], PC:PC1|Temp[3],     ;
+;                          ;                    ; PC:PC1|Temp[2]                                                                      ;
+; flipflop:PIPE4|Temp[4]   ; Lost Fanouts       ; flipflop:PIPE3|Temp[4], flipflop:PIPE2|Temp[144], flipflop:PIPE2|Temp[9],           ;
+;                          ;                    ; flipflop:PIPE2|Temp[4], flipflop:PIPE1|Temp[20]                                     ;
+; flipflop:PIPE4|Temp[3]   ; Lost Fanouts       ; flipflop:PIPE3|Temp[3], flipflop:PIPE2|Temp[8], flipflop:PIPE2|Temp[3],             ;
+;                          ;                    ; flipflop:PIPE1|Temp[19]                                                             ;
+; flipflop:PIPE4|Temp[2]   ; Lost Fanouts       ; flipflop:PIPE3|Temp[2], flipflop:PIPE2|Temp[7], flipflop:PIPE2|Temp[2],             ;
+;                          ;                    ; flipflop:PIPE1|Temp[18]                                                             ;
+; flipflop:PIPE4|Temp[1]   ; Lost Fanouts       ; flipflop:PIPE3|Temp[1], flipflop:PIPE2|Temp[6], flipflop:PIPE2|Temp[1],             ;
+;                          ;                    ; flipflop:PIPE1|Temp[17]                                                             ;
+; flipflop:PIPE4|Temp[0]   ; Lost Fanouts       ; flipflop:PIPE3|Temp[0], flipflop:PIPE2|Temp[5], flipflop:PIPE2|Temp[0],             ;
+;                          ;                    ; flipflop:PIPE1|Temp[16]                                                             ;
+; flipflop:PIPE4|Temp[35]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[67], flipflop:PIPE2|Temp[72], flipflop:PIPE2|Temp[40]           ;
+; flipflop:PIPE4|Temp[34]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[66], flipflop:PIPE2|Temp[71], flipflop:PIPE2|Temp[39]           ;
+; flipflop:PIPE4|Temp[33]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[65], flipflop:PIPE2|Temp[70], flipflop:PIPE2|Temp[38]           ;
+; flipflop:PIPE4|Temp[69]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[102], flipflop:PIPE2|Temp[138]                                  ;
+; flipflop:PIPE4|Temp[70]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[103], flipflop:PIPE2|Temp[139]                                  ;
+; flipflop:PIPE4|Temp[46]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[14]                                                             ;
+; flipflop:PIPE4|Temp[45]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[13]                                                             ;
+; flipflop:PIPE4|Temp[44]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[12]                                                             ;
+; flipflop:PIPE4|Temp[43]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[11]                                                             ;
+; flipflop:PIPE4|Temp[42]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[10]                                                             ;
+; flipflop:PIPE4|Temp[41]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[9]                                                              ;
+; flipflop:PIPE4|Temp[40]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[8]                                                              ;
+; flipflop:PIPE4|Temp[39]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[7]                                                              ;
+; flipflop:PIPE4|Temp[38]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[6]                                                              ;
+; flipflop:PIPE4|Temp[37]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[5]                                                              ;
+; flipflop:PIPE4|Temp[59]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[27]                                                             ;
+; flipflop:PIPE4|Temp[67]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[35]                                                             ;
+; flipflop:PIPE4|Temp[66]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[34]                                                             ;
+; flipflop:PIPE4|Temp[65]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[33]                                                             ;
+; flipflop:PIPE4|Temp[64]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[32]                                                             ;
+; flipflop:PIPE4|Temp[63]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[31]                                                             ;
+; flipflop:PIPE4|Temp[62]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[30]                                                             ;
+; flipflop:PIPE4|Temp[61]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[29]                                                             ;
+; flipflop:PIPE4|Temp[60]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[28]                                                             ;
+; flipflop:PIPE4|Temp[58]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[26]                                                             ;
+; flipflop:PIPE4|Temp[57]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[25]                                                             ;
+; flipflop:PIPE4|Temp[56]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[24]                                                             ;
+; flipflop:PIPE4|Temp[55]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[23]                                                             ;
+; flipflop:PIPE4|Temp[54]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[22]                                                             ;
+; flipflop:PIPE4|Temp[53]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[21]                                                             ;
+; flipflop:PIPE4|Temp[52]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[20]                                                             ;
+; flipflop:PIPE4|Temp[51]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[19]                                                             ;
+; flipflop:PIPE4|Temp[50]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[18]                                                             ;
+; flipflop:PIPE4|Temp[49]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[17]                                                             ;
+; flipflop:PIPE3|Temp[104] ; Lost Fanouts       ; flipflop:PIPE2|Temp[140]                                                            ;
+; flipflop:PIPE4|Temp[48]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[16]                                                             ;
+; flipflop:PIPE2|Temp[129] ; Lost Fanouts       ; flipflop:PIPE1|Temp[55]                                                             ;
+; flipflop:PIPE2|Temp[128] ; Lost Fanouts       ; flipflop:PIPE1|Temp[54]                                                             ;
+; flipflop:PIPE4|Temp[47]  ; Lost Fanouts       ; flipflop:PIPE3|Temp[15]                                                             ;
+; flipflop:PIPE2|Temp[126] ; Lost Fanouts       ; flipflop:PIPE1|Temp[52]                                                             ;
+; flipflop:PIPE2|Temp[125] ; Lost Fanouts       ; flipflop:PIPE1|Temp[51]                                                             ;
+; flipflop:PIPE2|Temp[124] ; Lost Fanouts       ; flipflop:PIPE1|Temp[50]                                                             ;
+; flipflop:PIPE2|Temp[123] ; Lost Fanouts       ; flipflop:PIPE1|Temp[49]                                                             ;
+; flipflop:PIPE2|Temp[122] ; Lost Fanouts       ; flipflop:PIPE1|Temp[48]                                                             ;
+; flipflop:PIPE2|Temp[121] ; Lost Fanouts       ; flipflop:PIPE1|Temp[47]                                                             ;
+; flipflop:PIPE2|Temp[120] ; Lost Fanouts       ; flipflop:PIPE1|Temp[46]                                                             ;
+; flipflop:PIPE2|Temp[119] ; Lost Fanouts       ; flipflop:PIPE1|Temp[45]                                                             ;
+; flipflop:PIPE2|Temp[118] ; Lost Fanouts       ; flipflop:PIPE1|Temp[44]                                                             ;
+; flipflop:PIPE2|Temp[117] ; Lost Fanouts       ; flipflop:PIPE1|Temp[43]                                                             ;
+; flipflop:PIPE2|Temp[127] ; Lost Fanouts       ; flipflop:PIPE1|Temp[53]                                                             ;
+; flipflop:PIPE2|Temp[115] ; Lost Fanouts       ; flipflop:PIPE1|Temp[41]                                                             ;
+; flipflop:PIPE2|Temp[114] ; Lost Fanouts       ; flipflop:PIPE1|Temp[40]                                                             ;
+; flipflop:PIPE2|Temp[113] ; Lost Fanouts       ; flipflop:PIPE1|Temp[39]                                                             ;
+; flipflop:PIPE2|Temp[112] ; Lost Fanouts       ; flipflop:PIPE1|Temp[38]                                                             ;
+; flipflop:PIPE2|Temp[111] ; Lost Fanouts       ; flipflop:PIPE1|Temp[37]                                                             ;
+; flipflop:PIPE2|Temp[110] ; Lost Fanouts       ; flipflop:PIPE1|Temp[36]                                                             ;
+; flipflop:PIPE2|Temp[109] ; Lost Fanouts       ; flipflop:PIPE1|Temp[35]                                                             ;
+; flipflop:PIPE2|Temp[108] ; Lost Fanouts       ; flipflop:PIPE1|Temp[34]                                                             ;
+; flipflop:PIPE2|Temp[107] ; Lost Fanouts       ; flipflop:PIPE1|Temp[33]                                                             ;
+; flipflop:PIPE2|Temp[106] ; Lost Fanouts       ; flipflop:PIPE1|Temp[32]                                                             ;
+; flipflop:PIPE2|Temp[116] ; Lost Fanouts       ; flipflop:PIPE1|Temp[42]                                                             ;
++--------------------------+--------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Source assignments for memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------+
+; Assignment                      ; Value              ; From ; To                                   ;
++---------------------------------+--------------------+------+--------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
++---------------------------------+--------------------+------+--------------------------------------+
+
+
++-----------------------------------------------------+
+; Parameter Settings for User Entity Instance: PC:PC1 ;
++----------------+-------+----------------------------+
+; Parameter Name ; Value ; Type                       ;
++----------------+-------+----------------------------+
+; data_width     ; 32    ; Signed Integer             ;
++----------------+-------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:mux_IN_PC ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 32    ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addSub:PCP4 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; data_width     ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memInst:memI|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 32                   ; Signed Integer                ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; memInst.mif          ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_b5d1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flipflop:PIPE1 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 64    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:0:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:1:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:2:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:3:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:4:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:5:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:6:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:7:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:8:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:9:regb ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:10:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:11:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:12:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:13:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:14:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:15:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:16:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:17:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:18:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:19:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:20:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:21:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:22:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:23:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:24:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:25:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:26:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:27:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:28:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:29:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:30:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: regBank:registradores|reg:\G2:31:regb ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; data_width     ; 32    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flipflop:PIPE2 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 147   ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: addSub:inPC ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; data_width     ; 32    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:mux_IN_ULA_2 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; data_width     ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:muxEscReg ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; data_width     ; 5     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flipflop:PIPE3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 107   ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memData:memD|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-------------------------------+
+; Parameter Name                     ; Value                ; Type                          ;
++------------------------------------+----------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
+; WIDTH_A                            ; 32                   ; Signed Integer                ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
+; WIDTH_B                            ; 1                    ; Untyped                       ;
+; WIDTHAD_B                          ; 1                    ; Untyped                       ;
+; NUMWORDS_B                         ; 1                    ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
+; BYTE_SIZE                          ; 8                    ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
+; INIT_FILE                          ; memData.mif          ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_74d1      ; Untyped                       ;
++------------------------------------+----------------------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flipflop:PIPE4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; data_width     ; 71    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2to1:muxEscReg2 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; data_width     ; 32    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                         ;
++-------------------------------------------+----------------------------------------------+
+; Name                                      ; Value                                        ;
++-------------------------------------------+----------------------------------------------+
+; Number of entity instances                ; 2                                            ;
+; Entity Instance                           ; memInst:memI|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                  ;
+;     -- WIDTH_A                            ; 32                                           ;
+;     -- NUMWORDS_A                         ; 1024                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                 ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
+; Entity Instance                           ; memData:memD|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                  ;
+;     -- WIDTH_A                            ; 32                                           ;
+;     -- NUMWORDS_A                         ; 1024                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                 ;
+;     -- WIDTH_B                            ; 1                                            ;
+;     -- NUMWORDS_B                         ; 1                                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                       ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                 ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                         ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                    ;
++-------------------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flipflop:PIPE3"                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; q[105] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULA:ULA1"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; over ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "addSub:inPC"   ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; b[1..0] ; Input ; Info     ; Stuck at GND ;
+; add_sub ; Input ; Info     ; Stuck at VCC ;
++---------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "memInst:memI" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; data ; Input ; Info     ; Stuck at GND   ;
+; wren ; Input ; Info     ; Stuck at GND   ;
++------+-------+----------+----------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "addSub:PCP4"    ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; b[31..3] ; Input ; Info     ; Stuck at GND ;
+; b[1..0]  ; Input ; Info     ; Stuck at GND ;
+; b[2]     ; Input ; Info     ; Stuck at VCC ;
+; add_sub  ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jun 17 20:36:33 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 0 design units, including 0 entities, in source file memdata_inst.vhd
+Info (12021): Found 0 design units, including 0 entities, in source file meminst_inst.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file mux32to1.vhd
+    Info (12022): Found design unit 1: mux32to1-rtl
+    Info (12023): Found entity 1: mux32to1
+Info (12021): Found 2 design units, including 1 entities, in source file dec5p1.vhd
+    Info (12022): Found design unit 1: dec5to1-rtl
+    Info (12023): Found entity 1: dec5to1
+Info (12021): Found 2 design units, including 0 entities, in source file array32.vhd
+    Info (12022): Found design unit 1: array32
+    Info (12022): Found design unit 2: array32-body
+Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
+    Info (12022): Found design unit 1: reg-rtl
+    Info (12023): Found entity 1: reg
+Info (12021): Found 2 design units, including 1 entities, in source file addsub.vhd
+    Info (12022): Found design unit 1: addSub-rtl
+    Info (12023): Found entity 1: addSub
+Info (12021): Found 2 design units, including 1 entities, in source file mux2to1.vhd
+    Info (12022): Found design unit 1: mux2to1-behavioral
+    Info (12023): Found entity 1: mux2to1
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-rtl
+    Info (12023): Found entity 1: PC
+Info (12021): Found 2 design units, including 1 entities, in source file regbank.vhd
+    Info (12022): Found design unit 1: regBank-rtl
+    Info (12023): Found entity 1: regBank
+Info (12021): Found 2 design units, including 1 entities, in source file signalextensor.vhd
+    Info (12022): Found design unit 1: signalExtensor-rtl
+    Info (12023): Found entity 1: signalExtensor
+Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
+    Info (12022): Found design unit 1: controller-rtl
+    Info (12023): Found entity 1: controller
+Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
+    Info (12022): Found design unit 1: flipflop-rtl
+    Info (12023): Found entity 1: flipflop
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-rtl
+    Info (12023): Found entity 1: ULA
+Info (12021): Found 2 design units, including 1 entities, in source file opula.vhd
+    Info (12022): Found design unit 1: opULA-rtl
+    Info (12023): Found entity 1: opULA
+Info (12021): Found 2 design units, including 1 entities, in source file mips.vhd
+    Info (12022): Found design unit 1: MIPS-rtl
+    Info (12023): Found entity 1: MIPS
+Info (12021): Found 2 design units, including 1 entities, in source file meminst.vhd
+    Info (12022): Found design unit 1: meminst-SYN
+    Info (12023): Found entity 1: memInst
+Info (12021): Found 2 design units, including 1 entities, in source file memdata.vhd
+    Info (12022): Found design unit 1: memdata-SYN
+    Info (12023): Found entity 1: memData
+Info (12127): Elaborating entity "MIPS" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(25): object "sig_ULA_over" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at MIPS.vhd(25): object "sig_lerMem_2" assigned a value but never read
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC1"
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:mux_IN_PC"
+Info (12128): Elaborating entity "addSub" for hierarchy "addSub:PCP4"
+Info (12128): Elaborating entity "memInst" for hierarchy "memInst:memI"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memInst:memI|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "memInst:memI|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "memInst:memI|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memInst.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b5d1.tdf
+    Info (12023): Found entity 1: altsyncram_b5d1
+Info (12128): Elaborating entity "altsyncram_b5d1" for hierarchy "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated"
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:PIPE1"
+Info (12128): Elaborating entity "controller" for hierarchy "controller:controle"
+Info (12128): Elaborating entity "regBank" for hierarchy "regBank:registradores"
+Info (12128): Elaborating entity "reg" for hierarchy "regBank:registradores|reg:\G2:0:regb"
+Info (12128): Elaborating entity "mux32to1" for hierarchy "regBank:registradores|mux32to1:outData1"
+Info (12128): Elaborating entity "dec5to1" for hierarchy "regBank:registradores|dec5to1:decWrite"
+Info (12128): Elaborating entity "signalExtensor" for hierarchy "signalExtensor:ExtSinal"
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:PIPE2"
+Info (12128): Elaborating entity "opULA" for hierarchy "opULA:operaULA"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1"
+Warning (10541): VHDL Signal Declaration warning at ULA.vhd(11): used implicit default value for signal "over" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at ULA.vhd(23): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(23): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(25): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(25): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(27): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(27): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(33): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(33): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(35): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(35): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(39): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(39): signal "in1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ULA.vhd(43): signal "in0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "mux2to1" for hierarchy "mux2to1:muxEscReg"
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:PIPE3"
+Info (12128): Elaborating entity "memData" for hierarchy "memData:memD"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memData:memD|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "memData:memD|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "memData:memD|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "memData.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_74d1.tdf
+    Info (12023): Found entity 1: altsyncram_74d1
+Info (12128): Elaborating entity "altsyncram_74d1" for hierarchy "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated"
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:PIPE4"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[16]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[17]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[18]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[19]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[20]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[21]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[22]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[23]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[24]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[25]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[26]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[27]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[28]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[29]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[30]"
+        Warning (14320): Synthesized away node "memData:memD|altsyncram:altsyncram_component|altsyncram_74d1:auto_generated|q_a[31]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[15]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[16]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[17]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[18]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[19]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[20]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[21]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[22]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[23]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[24]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[25]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[26]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[27]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[28]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[29]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[30]"
+        Warning (14320): Synthesized away node "memInst:memI|altsyncram:altsyncram_component|altsyncram_b5d1:auto_generated|q_a[31]"
+Info (17049): 1443 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "rst"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 518 megabytes
+    Info: Processing ended: Wed Jun 17 20:36:36 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+
