@@ -18,7 +18,7 @@ L10
 V6`7LhPYRQ=K_:CfXUNDIW1
 Z10 OV;C;10.1d;51
 31
-Z11 !s108 1434699483.922000
+Z11 !s108 1434728250.755000
 Z12 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd|
 Z13 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/addSub.vhd|
 Z14 o-93 -work work -O0
@@ -56,7 +56,7 @@ L4
 VGT7iC8l<9A7JBVEH544N]0
 R10
 31
-Z18 !s108 1434699482.841000
+Z18 !s108 1434728249.839000
 Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd|
 Z20 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/array32.vhd|
 R14
@@ -94,7 +94,7 @@ L6
 Vf3Z>Y@VXVAhOZ_Eaa16>l3
 R10
 31
-Z25 !s108 1434699485.957000
+Z25 !s108 1434728252.332000
 Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd|
 Z27 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/controller.vhd|
 R14
@@ -131,7 +131,7 @@ L4
 VKmd0JBLEQ6k?41EJL]Dh70
 R10
 31
-Z30 !s108 1434699482.061000
+Z30 !s108 1434728249.475000
 Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd|
 Z32 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd|
 R14
@@ -166,7 +166,7 @@ L4
 VGAJ@ZN7<:9@mhCX7fz6R81
 R10
 31
-Z35 !s108 1434699486.343000
+Z35 !s108 1434728252.794000
 Z36 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd|
 Z37 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/flipflop.vhd|
 R14
@@ -201,7 +201,7 @@ L42
 Vk4]ND><m>Y6DJd3K1l1<=1
 R10
 31
-Z40 !s108 1434699488.843000
+Z40 !s108 1434728254.642000
 Z41 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd|
 Z42 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memData.vhd|
 R14
@@ -236,7 +236,7 @@ L42
 VS]<7Ua3[R2BZ_lhCSPFJG2
 R10
 31
-Z45 !s108 1434699488.390000
+Z45 !s108 1434728254.262000
 Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd|
 Z47 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst.vhd|
 R14
@@ -272,7 +272,7 @@ L5
 V3iagJjH?V=zX9;gV6=Fh13
 R10
 31
-Z51 !s108 1434699487.694000
+Z51 !s108 1434728253.817000
 Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd|
 Z53 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/MIPS.vhd|
 R14
@@ -308,7 +308,7 @@ L4
 VHWfiH?7fk:jHKRHQCXn[P2
 R10
 31
-Z56 !s108 1434699484.423000
+Z56 !s108 1434728251.095000
 Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd|
 Z58 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux2to1.vhd|
 R14
@@ -344,7 +344,7 @@ L5
 VaL4SI[zKL7ZaH?dJnIiC13
 R10
 31
-Z61 !s108 1434699489.357000
+Z61 !s108 1434728255.016000
 Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd|
 Z63 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/mux32to1.vhd|
 R14
@@ -382,7 +382,7 @@ L6
 V6STmjaYBS:NVD^lfdINem1
 R10
 31
-Z66 !s108 1434699487.281000
+Z66 !s108 1434728253.519000
 Z67 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd|
 Z68 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/opULA.vhd|
 R14
@@ -419,7 +419,7 @@ L4
 VXi`Y4SQ]Kd[ko?nIUG67A2
 R10
 31
-Z72 !s108 1434699484.915000
+Z72 !s108 1434728251.562000
 Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd|
 Z74 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/PC.vhd|
 R14
@@ -454,7 +454,7 @@ L4
 VBk0dZ0MB:W:7bNhEMIOPG2
 R10
 31
-Z77 !s108 1434699483.382000
+Z77 !s108 1434728250.303000
 Z78 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd|
 Z79 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/reg.vhd|
 R14
@@ -494,7 +494,7 @@ VIe8UJm`Yg@IQLkc]5m[1^1
 R10
 31
 !i10b 1
-Z82 !s108 1434699489.792000
+Z82 !s108 1434728255.458000
 Z83 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd|
 Z84 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/regBank.vhd|
 R14
@@ -531,7 +531,7 @@ L5
 VCJSQJmFm9lf=CMFX``gMN2
 R10
 31
-Z87 !s108 1434699485.399000
+Z87 !s108 1434728251.920000
 Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd|
 Z89 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/signalExtensor.vhd|
 R14
@@ -570,7 +570,7 @@ L7
 V6c^h:TH0AmUaF>O=a7M[K2
 R10
 31
-Z93 !s108 1434699486.792000
+Z93 !s108 1434728253.155000
 Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd|
 Z95 !s107 C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/ULA.vhd|
 R14
