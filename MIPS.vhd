@@ -13,7 +13,7 @@ architecture rtl of MIPS is
 	sig_imediate_ext, sig_dadoLido1_1,sig_dadoLido2_1, sig_imediate_ext_1, sig_somInPC,
 	sig_IN2_ULA, sig_ULA_result, sig_OUT_PCP4_3, sig_in_PC, sig_out_PC,
 	sig_OUT_jump_1, sig_ULA_result_1, sig_dadoLido2_2, sig_OUT_memD, 
-	sig_OUT_memD_1, sig_ULA_result_2, sig_OUT_PCP4_1: std_logic_vector(31 downto 0);
+	sig_OUT_memD_1, sig_ULA_result_2, sig_OUT_PCP4_1, sig_OUT_PCP4_correction: std_logic_vector(31 downto 0);
 	signal in_PIPE1, out_PIPE1: std_logic_vector(63 downto 0);
 	signal sig_opcode, sig_function : std_logic_vector(5 downto 0);
 	signal sig_ReadReg1, sig_ReadReg2, sig_regDest, sig_RegEsc, sig_ReadReg2_1, sig_regDest_1,
@@ -173,7 +173,7 @@ begin
 	notclock <= not clk;
 	memI: memInst PORT MAP (
 		address	 => sig_out_PC(11 downto 2),
-		clock	 => notclock,
+		clock	 => clk,
 		data => (others => '0'),
 		wren => '0',
 		q	 => sig_OUT_memI_1
@@ -257,8 +257,15 @@ begin
 
 	sig_somInPC <= sig_imediate_ext_1(29 downto 0) & "00";
 
+	PCP4_correction: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (                  -- COMENTÁRIO GIGANTE FALANDO DA CORREÇÃO DO PC+4
+		a => sig_OUT_PCP4_3,                                                            -- Pelo atraso gerado pela memomória de instrução(1 ciclo de atraso) 
+		b => "00000000000000000000000000000100",                                     
+		add_sub => '0',
+		result => sig_OUT_PCP4_correction
+	);
+
 	inPC: addSub GENERIC MAP (DATA_WIDTH => 32) PORT MAP (
-		a => sig_OUT_PCP4_3,
+		a => sig_OUT_PCP4_correction,
 		b => sig_somInPC,       --b de 10 recebe de 32 --  
 		add_sub => '1',
 		result => sig_OUT_jump
