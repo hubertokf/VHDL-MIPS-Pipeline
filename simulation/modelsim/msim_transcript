@@ -1,13 +1,13 @@
-# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
 # do MIPS_run_msim_rtl_vhdl.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
 # vcom -93 -work work {C:/Users/Guilherme/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
@@ -656,5 +656,3 @@ do MIPS_run_msim_rtl_vhdl1.do
 # wave zoom full
 # 0 ps
 # 5250 ns
-# WARNING: No extended dataflow license exists
-# dfAddDataflowFromWave: (vish-4014) No objects found matching 'mux_IN_PC'.
