@@ -1,47 +1,47 @@
 library ieee;  
-use ieee.std_logic_1164.all; 
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-entity memInst is 
-	generic (wlength: integer := 32;
-			 words  : integer :=10);
+entity memInst2 is 
+	generic (
+		wlength: integer := 32;
+		words  : integer := 10
+	);
 	Port(
-		DataIn: IN std_logic_vector(wlength -1 downto 0);
-		Addr_in: IN std_logic_vector(words -1 downto 0);
-		Addr_out: IN std_logic_vector(words -1 downto );
-		clock, WE: IN std_logic;
-		DataOut: OUT std_logic_vector(wlength -1 downto 0));
-end memInst;
+		data: IN std_logic_vector(wlength-1 downto 0);
+		address: IN std_logic_vector(words-1 downto 0);
+		clock, wren: IN std_logic;
+		q: OUT std_logic_vector(wlength-1 downto 0)
+	);
+end memInst2;
 
- ARCHITECTURE rlt OF memInst is
+ ARCHITECTURE rlt OF memInst2 is 
+	type memory_type is array (2**words-1 downto 0) of std_logic_vector(wlength -1 downto 0);	
+	signal memory: memory_type;
+	
+begin
+	gen_init_mem: for i in 8 to 1023 generate
+      memory(i) <= "00000000000000000000000000000000";
+   end generate gen_init_mem;
 
- COMPONENT reg 
-	 generic(DATA_WIDTH := INTEGER);
-	 	port(
-	 		clk, rst, en: std_logic;
-	 		D: IN std_logic_vector(lenght -1 downto 0);
-	 		Q: OUT std_logic_vector(lenght -1 downto 0));
- END COMPONENT;
-
- type memory_type is array (2**words -1 downto 0) of std_logic_vector(wlength -1 downto 0);
- signal memory: memory_type;
- signal sw:  std_logic := '0';
- signal Data: std_logic_vector(wlength -1 downto 0);
-
- 	begin
-		sw<='1';
-		reg_In1: reg generic map(lenght => wlength)
-				 Port Map( D=> DataIn,
-				 		   clk => clock,
-				 		   WE => sw,
-				 		   Q => Data
-				 		   );
-	process (clock, Addr_out, WE)
+	memory(0) <= "00100000000000100000000000000011";
+	memory(1) <= "00100000000000110000000000000100";
+	memory(2) <= "00100000000001000000000000000101";
+	memory(3) <= "00100000011000110000000000000100";
+	memory(4) <= "00100000000001100000000000000111";
+	memory(5) <= "10101100000000100000000000000100";
+	memory(6) <= "10001100000001110000000000000100";
+	memory(7) <= "00010000000000000000000000000010";
+	
+	process (clock, memory, address, wren)
 	begin
-		if clock'event and clock ='1' then
-			if WE ='1' then
-				memory(conv_integer(Addr_in(words -1 downto 0))) <= Data(wlenght -1 downto 0);
-			end if;
-		DataOut <= memory(conv_integer(Addr_out(words -1 downto 0))) after 1ns;
-		end if;
+--		if clock'event and clock ='1' then
+--			if wren = '1' then
+--				memory(to_integer(unsigned(address))) <= data;
+--			end if;
+--		end if;
+		
+		q <= memory(to_integer(unsigned(address))) after 1ns;
 	end process;
+	
 end rlt;

@@ -17,7 +17,7 @@ vcom -93 -work work {../../flipflop.vhd}
 vcom -93 -work work {../../ULA.vhd}
 vcom -93 -work work {../../opULA.vhd}
 vcom -93 -work work {../../MIPS.vhd}
-vcom -93 -work work {../../memInst.vhd}
+vcom -93 -work work {../../memInst2.vhd}
 vcom -93 -work work {../../memData.vhd}
 vcom -93 -work work {../../mux32to1.vhd}
 vcom -93 -work work {../../regBank.vhd}

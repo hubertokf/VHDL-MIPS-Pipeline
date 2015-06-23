@@ -72,7 +72,6 @@ add wave -noupdate -expand -group {OUT PIPE 2} -label sig_DvC_1 /mips_vhd_tst/i1
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_memParaReg_1 /mips_vhd_tst/i1/sig_memParaReg_1
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_escReg_1 /mips_vhd_tst/i1/sig_escReg_1
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_OUT_PCP4_3 /mips_vhd_tst/i1/sig_OUT_PCP4_3
-add wave -noupdate -expand -group {OUT PIPE 2} -label sig_OUT_PCP4_correction /mips_vhd_tst/i1/sig_OUT_PCP4_correction
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_dadoLido1_1 /mips_vhd_tst/i1/sig_dadoLido1_1
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_dadoLido2_1 /mips_vhd_tst/i1/sig_dadoLido2_1
 add wave -noupdate -expand -group {OUT PIPE 2} -label sig_imediate_ext_1 /mips_vhd_tst/i1/sig_imediate_ext_1
@@ -149,10 +148,10 @@ add wave -noupdate -group muxEscReg2 -label sig_OUT_memD_1 /mips_vhd_tst/i1/sig_
 add wave -noupdate -group muxEscReg2 -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
 add wave -noupdate -group muxEscReg2 -label sig_regData /mips_vhd_tst/i1/sig_regData
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {28496 ps} 0}
+WaveRestoreCursors {{Cursor 1} {49989 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 172
-configure wave -valuecolwidth 100
+configure wave -valuecolwidth 210
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -165,4 +164,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {79936 ps}
+WaveRestoreZoom {0 ps} {92332 ps}
