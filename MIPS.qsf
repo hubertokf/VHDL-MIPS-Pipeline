@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY MIPS
+set_global_assignment -name TOP_LEVEL_ENTITY shifter
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:41:40  JUNE 09, 2015"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -74,6 +74,7 @@ set_global_assignment -name QIP_FILE memInst.qip
 set_global_assignment -name MIF_FILE memData.mif
 set_global_assignment -name QIP_FILE memData.qip
 set_global_assignment -name HEX_FILE memInst.hex
+set_global_assignment -name VHDL_FILE shifter.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
