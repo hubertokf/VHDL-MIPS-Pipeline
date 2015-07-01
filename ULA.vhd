@@ -7,7 +7,7 @@ Entity ULA is
 port (
 	in0, in1: in std_logic_vector(31 downto 0);
 	oper: in std_logic_vector(3 downto 0);
-	zero, over: out std_logic;
+	zero: out std_logic;
 	output : out std_logic_vector(31 downto 0)
 );
 end ULA;

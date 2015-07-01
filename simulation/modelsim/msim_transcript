@@ -18,7 +18,7 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memInst2
 # -- Compiling architecture rlt of memInst2
-# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -255,7 +255,7 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memInst2
 # -- Compiling architecture rlt of memInst2
-# ** Warning: [4] ../../memInst2.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] ../../memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # vcom -93 -work work {../../memData.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -290,6 +290,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Compiling entity MIPS_vhd_tst
 # -- Compiling architecture MIPS_arch of MIPS_vhd_tst
 # 
+# 
+# 
 # vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
 # vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
 # Loading std.standard
@@ -319,10 +321,6 @@ do MIPS_run_msim_rtl_vhdl1.do
 # Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
-# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/ULA1/over has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
 # do MIPS_run_msim_rtl_vhdl.do 
 # transcript on
 # if {[file exists rtl_work]} {
@@ -340,7 +338,7 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memInst2
 # -- Compiling architecture rlt of memInst2
-# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -465,6 +463,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Compiling architecture rtl of regBank
 # 
 # 
+#--mem load -format hex -infile memInst.hex /mips_vhd_tst/i1/memI/memory
+# 
 # do wave.do
 # onerror {resume}
 # quietly WaveActivateNextPane {} 0
@@ -540,7 +540,6 @@ do MIPS_run_msim_rtl_vhdl1.do
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_memParaReg_1 /mips_vhd_tst/i1/sig_memParaReg_1
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_escReg_1 /mips_vhd_tst/i1/sig_escReg_1
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_OUT_PCP4_3 /mips_vhd_tst/i1/sig_OUT_PCP4_3
-# add wave -noupdate -expand -group {OUT PIPE 2} -label sig_OUT_PCP4_correction /mips_vhd_tst/i1/sig_OUT_PCP4_correction
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_dadoLido1_1 /mips_vhd_tst/i1/sig_dadoLido1_1
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_dadoLido2_1 /mips_vhd_tst/i1/sig_dadoLido2_1
 # add wave -noupdate -expand -group {OUT PIPE 2} -label sig_imediate_ext_1 /mips_vhd_tst/i1/sig_imediate_ext_1
@@ -563,6 +562,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # add wave -noupdate -group ULA -label sig_operULA /mips_vhd_tst/i1/sig_operULA
 # add wave -noupdate -group ULA -label sig_ULA_zero /mips_vhd_tst/i1/sig_ULA_zero
 # add wave -noupdate -group ULA -label sig_ULA_over /mips_vhd_tst/i1/sig_ULA_over
+# ** Error: (vish-4014) No objects found matching '/mips_vhd_tst/i1/sig_ULA_over'.
+# Executing ONERROR command at macro ./wave.do line 96
 # add wave -noupdate -group ULA -label sig_ULA_result /mips_vhd_tst/i1/sig_ULA_result
 # add wave -noupdate -group muxEscReg -label sig_RegDST_1 /mips_vhd_tst/i1/sig_RegDST_1
 # add wave -noupdate -group muxEscReg -label sig_ReadReg2_1 /mips_vhd_tst/i1/sig_ReadReg2_1
@@ -617,10 +618,10 @@ do MIPS_run_msim_rtl_vhdl1.do
 # add wave -noupdate -group muxEscReg2 -label sig_ULA_result_2 /mips_vhd_tst/i1/sig_ULA_result_2
 # add wave -noupdate -group muxEscReg2 -label sig_regData /mips_vhd_tst/i1/sig_regData
 # TreeUpdate [SetDefaultTree]
-# WaveRestoreCursors {{Cursor 1} {28496 ps} 0}
+# WaveRestoreCursors {{Cursor 1} {49989 ps} 0}
 # quietly wave cursor active 1
 # configure wave -namecolwidth 172
-# configure wave -valuecolwidth 100
+# configure wave -valuecolwidth 210
 # configure wave -justifyvalue left
 # configure wave -signalnamewidth 0
 # configure wave -snapdistance 10
@@ -633,7 +634,7 @@ do MIPS_run_msim_rtl_vhdl1.do
 # configure wave -timeline 0
 # configure wave -timelineunits ns
 # update
-# WaveRestoreZoom {0 ps} {79936 ps}
+# WaveRestoreZoom {0 ps} {92332 ps}
 # 
 # run 5000ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -642,8 +643,6 @@ do MIPS_run_msim_rtl_vhdl1.do
 #    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/inPC
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/inPC
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/PCP4_correction
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /mips_vhd_tst/i1/memI
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -661,12 +660,13 @@ do MIPS_run_msim_rtl_vhdl1.do
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 2  Instance: /mips_vhd_tst/i1/ULA1
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /mips_vhd_tst/i1/inPC
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 4  Instance: /mips_vhd_tst/i1/ULA1
 # 
 # wave zoom full
 # 0 ps
 # 5250 ns
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/simulation/modelsim/wave.do
 do MIPS_run_msim_rtl_vhdl1.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -780,7 +780,7 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memInst2
 # -- Compiling architecture rlt of memInst2
-# ** Warning: [4] ../../memInst2.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] ../../memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # vcom -93 -work work {../../memData.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -815,6 +815,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Compiling entity MIPS_vhd_tst
 # -- Compiling architecture MIPS_arch of MIPS_vhd_tst
 # 
+# 
+# 
 # vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
 # vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
 # Loading std.standard
@@ -844,10 +846,6 @@ do MIPS_run_msim_rtl_vhdl1.do
 # Loading altera_mf.altera_common_conversion(body)
 # Loading altera_mf.altera_device_families(body)
 # Loading altera_mf.altsyncram(translated)
-# ** Warning: (vsim-8683) Uninitialized out port /mips_vhd_tst/i1/ULA1/over has no driver.
-# 
-# This port will contribute value (U) to the signal network.
-# 
 # do MIPS_run_msim_rtl_vhdl.do 
 # transcript on
 # if {[file exists rtl_work]} {
@@ -865,7 +863,7 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Loading package NUMERIC_STD
 # -- Compiling entity memInst2
 # -- Compiling architecture rlt of memInst2
-# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: [4] C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/memInst2.vhd(48): (vcom-1207) An abstract literal and an identifier must have a separator between them.
 # vcom -93 -work work {C:/Users/Huberto/Documents/GitHub/VHDL-MIPS-Pipeline/dec5p1.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -990,6 +988,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # -- Compiling architecture rtl of regBank
 # 
 # 
+#--mem load -format hex -infile memInst.hex /mips_vhd_tst/i1/memI/memory
+# 
 # do wave.do
 # onerror {resume}
 # quietly WaveActivateNextPane {} 0
@@ -1087,6 +1087,8 @@ do MIPS_run_msim_rtl_vhdl1.do
 # add wave -noupdate -group ULA -label sig_operULA /mips_vhd_tst/i1/sig_operULA
 # add wave -noupdate -group ULA -label sig_ULA_zero /mips_vhd_tst/i1/sig_ULA_zero
 # add wave -noupdate -group ULA -label sig_ULA_over /mips_vhd_tst/i1/sig_ULA_over
+# ** Error: (vish-4014) No objects found matching '/mips_vhd_tst/i1/sig_ULA_over'.
+# Executing ONERROR command at macro ./wave.do line 96
 # add wave -noupdate -group ULA -label sig_ULA_result /mips_vhd_tst/i1/sig_ULA_result
 # add wave -noupdate -group muxEscReg -label sig_RegDST_1 /mips_vhd_tst/i1/sig_RegDST_1
 # add wave -noupdate -group muxEscReg -label sig_ReadReg2_1 /mips_vhd_tst/i1/sig_ReadReg2_1

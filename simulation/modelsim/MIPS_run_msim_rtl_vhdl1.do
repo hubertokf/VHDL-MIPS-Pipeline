@@ -1,3 +1,6 @@
+
+
+
 transcript on
 if {[file exists rtl_work]} {
 	vdel -lib rtl_work -all
@@ -24,7 +27,11 @@ vcom -93 -work work {../../regBank.vhd}
 
 vcom -93 -work work {MIPS.vht}
 
+
+
 vsim +altera -do MIPS_run_msim_rtl_vhdl.do -l msim_transcript -gui work.mips_vhd_tst 
+
+#--mem load -format hex -infile memInst.hex /mips_vhd_tst/i1/memI/memory
 
 do wave.do
 

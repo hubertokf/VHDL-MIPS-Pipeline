@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MIPS is
     Port (
+		outs: out std_logic_vector(31 downto 0);
 		clk, rst: in std_logic
 	 );
 end MIPS;
@@ -22,7 +23,7 @@ architecture rtl of MIPS is
 	signal sig_ulaOp, sig_ulaOp_1: std_logic_vector(1 downto 0);
 	signal sig_ulaFonte, sig_ulaFonte_1, sig_escMem, sig_escMem_1, sig_lerMem, 
 	sig_lerMem_1, sig_DvC, sig_DvC_1, sig_memParaReg, sig_memParaReg_1, sig_fontePC, we3, 
-	sig_escReg_1, sig_ULA_zero, sig_ULA_over, sig_RegDST, sig_escMem_2, sig_lerMem_2,
+	sig_escReg_1, sig_ULA_zero, sig_RegDST, sig_escMem_2, sig_lerMem_2,
 	sig_DvC_2, sig_memParaReg_2, sig_escReg_2, sig_ULA_zero_1, sig_memParaReg_3, sig_escReg_3, sig_escReg, sig_RegDST_1 : STD_LOGIC;
 	signal in_PIPE2, out_pipe2: std_logic_vector( 146 downto 0);
 	signal sig_operULA: std_logic_vector(3 downto 0);
@@ -147,7 +148,7 @@ architecture rtl of MIPS is
 		port (
 			in0, in1: in std_logic_vector(31 downto 0);
 			oper: in std_logic_vector(3 downto 0);
-			zero, over: out std_logic;
+			zero: out std_logic;
 			output : out std_logic_vector(31 downto 0)
 		);
 	end component;
@@ -295,7 +296,6 @@ begin
 		in1 => sig_IN2_ULA,
 		oper => sig_operULA,
 		zero => sig_ULA_zero,
-		over => sig_ULA_over,
 		output => sig_ULA_result
 	);
 
@@ -331,7 +331,7 @@ begin
 	sig_fontePC <= sig_DvC_2 and sig_ULA_zero_1;
 
 	memD: memData PORT MAP (
-		address	 => sig_ULA_result_1(9 downto 0),
+		address	 => sig_ULA_result_1(11 downto 2),
 		clock	 => clk,
 		data => sig_dadoLido2_2,
 		wren => sig_escMem_2,
@@ -361,5 +361,7 @@ begin
 		B => sig_OUT_memD_1,
 		X => sig_regData
 	);
+	
+	outs <= sig_regData;
 
 end rtl;

@@ -20,7 +20,7 @@ end memInst2;
 	signal memory: memory_type;
 	
 begin
-	gen_init_mem: for i in 8 to 1023 generate
+	gen_init_mem: for i in 11 to 1023 generate
       memory(i) <= "00000000000000000000000000000000";
    end generate gen_init_mem;
 
@@ -31,7 +31,11 @@ begin
 	memory(4) <= "00100000000001100000000000000111";
 	memory(5) <= "10101100000000100000000000000100";
 	memory(6) <= "10001100000001110000000000000100";
-	memory(7) <= "00010000000000000000000000000010";
+	
+	memory(7) <= "00000000000001111000100000100000";
+	memory(8) <= "00000000000001111001000000100000";
+	memory(9) <= "00000000000001111001100000100000";
+	memory(10) <= "00010000000000000000000000000010";
 	
 	process (clock, memory, address, wren)
 	begin
